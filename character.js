@@ -1,8 +1,5 @@
 export class Character {
-    constructor() {
-    }
-
-    setAbilities(abilities) {
+    constructor(abilities) {
         this.abilities = abilities
     }
 }
