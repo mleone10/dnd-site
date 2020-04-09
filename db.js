@@ -1,4 +1,4 @@
-import {Character, Abilities} from './character'
+import {Character, Abilities} from './character.js'
 
 export class Database {
     getCharacter() {
