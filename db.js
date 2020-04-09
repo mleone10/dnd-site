@@ -1,6 +1,6 @@
 import {Character, Abilities} from './character.js'
 
-export class Database {
+export default class Database {
     constructor() {
     }
 
