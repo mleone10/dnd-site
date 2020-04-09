@@ -1,4 +1,4 @@
 import Database from './db.js'
 
-db = new Database()
+var db = new Database()
 console.log(db.getCharacter())
