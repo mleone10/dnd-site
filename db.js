@@ -1,4 +1,4 @@
-import './character'
+import {Character, Abilities} from './character'
 
 var db = {
     getCharacter: function() {
