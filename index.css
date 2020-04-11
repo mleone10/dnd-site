@@ -9,6 +9,11 @@ body {
     max-width: 70%;
 }
 
+table {
+    margin: 0 auto;
+    width: 90%;
+}
+
 table .str {
     text-align: left;
 }
@@ -18,5 +23,19 @@ table .num {
 }
 
 table .check {
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.flex-item {
+    flex: 1 1 0px;
+}
+
+.flex-item h3 {
     text-align: center;
 }
