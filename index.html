@@ -1,9 +1,206 @@
 <html>
     <head>
         <title>D&D Site</title>
-        <script type="module" src="main.js"></script>
+        <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="index.css">
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Letheryl</h1>
+        <h2>Warlock 3 &mdash; Pallid Elf &mdash; Far Traveler</h2>
+        <div id="stats">
+            <h3>Stats</h3>
+            <table>
+                <tr>
+                    <th>Stat</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td class="str">Proficiency Bonus</td>
+                    <td class="num">+2</td>
+                </tr>
+                <tr>
+                    <td class="str">Inspiration</td>
+                    <td class="num">0</td>
+                </tr>
+                <tr>
+                    <td class="str">Armor Class</td>
+                    <td class="num">13</td>
+                </tr>
+                <tr>
+                    <td class="str">Initiative</td>
+                    <td class="num">+2</td>
+                </tr>
+                <tr>
+                    <td class="str">Hit Points</td>
+                    <td class="num">8/8</td>
+                </tr>
+            </table>
+        </div>
+        <div id="abilities">
+            <h3>Abilities</h3>
+            <table>
+                <tr>
+                    <th>Ability</th>
+                    <th>Score</th>
+                    <th>Mod</th>
+                    <th>Prof?</th>
+                </tr>
+                <tr>
+                    <td class="str">Strength</td>
+                    <td class="num">10</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">Dexterity</td>
+                    <td class="num">10</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">Consitution</td>
+                    <td class="num">10</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">Intelligence</td>
+                    <td class="num">10</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">Widsom</td>
+                    <td class="num">10</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">Charisma</td>
+                    <td class="num">10</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+            </table>
+        </div>
+        <div id="skills">
+            <h3>Skills</h3>
+            <table>
+                <tr>
+                    <th>Skill</th>
+                    <th>Ability</th>
+                    <th>Mod</th>
+                    <th>Prof?</th>
+                </tr>
+                <tr>
+                    <td class="str">Acrobatics</td>
+                    <td class="str">Dex</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">Animal Handling</td>
+                    <td class="str">Wis</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">Arcana</td>
+                    <td class="str">Int</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">Athletics</td>
+                    <td class="str">Str</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">Deception</td>
+                    <td class="str">Cha</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">History</td>
+                    <td class="str">Int</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">Insight</td>
+                    <td class="str">Wis</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">Intimidation</td>
+                    <td class="str">Cha</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">Investigation</td>
+                    <td class="str">Int</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">Medicine</td>
+                    <td class="str">Wis</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">Nature</td>
+                    <td class="str">Int</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">Perception</td>
+                    <td class="str">Wis</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">Performance</td>
+                    <td class="str">Cha</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">Persuasion</td>
+                    <td class="str">Cha</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">Religion</td>
+                    <td class="str">Int</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">Sleight of Hand</td>
+                    <td class="str">Dex</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">Stealth</td>
+                    <td class="str">Dex</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+                <tr>
+                    <td class="str">Survival</td>
+                    <td class="str">Wis</td>
+                    <td class="num">+1</td>
+                    <td class="check"><input type="checkbox" onclick="return false;" checked=true />
+                </tr>
+            </table>
+        </div>
     </body>
 </html>
