@@ -9,6 +9,11 @@ body {
     max-width: 70%;
 }
 
+#topmatter p {
+    text-align: center;
+    line-height: 0.8em;
+}
+
 table {
     margin: 0 auto;
     width: 90%;
@@ -38,4 +43,8 @@ table .check {
 
 .flex-item h3 {
     text-align: center;
+}
+
+.own-row {
+    display: inline-block;
 }
