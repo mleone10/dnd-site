@@ -1,0 +1,209 @@
+{
+    "name": "Letheryl",
+    "race": "Pallid Elf",
+    "gender": "Male",
+    "background": "Sage (Researcher)",
+    "flavortext": "\"No, I can't say this is exactly my 'comfort zone' - we departed that happy Grove quite some time ago. But I suppose it's all fallen on me, hmm? 'An elf bleeds the same as anyone,' as they say, so I've got quite a weight on my shoulders...\"",
+    "classes": [
+        {
+            "name": "Warlock",
+            "levels": 3
+        }
+    ],
+    "stats": {
+        "proficiencybonus": 2,
+        "inspiration": 0,
+        "armorclass": 13,
+        "initiative": 2,
+        "hitpoints": {
+            "current": 24,
+            "max": 24
+        }
+    },
+    "abilities": {
+        "strength": {
+            "score": 9,
+            "mod": -1,
+            "save": false
+        },
+        "constitution": {
+            "score": 14,
+            "mod": 2,
+            "save": false
+        },
+        "dexterity": {
+            "score": 14,
+            "mod": 2,
+            "save": false
+        },
+        "wisdom": {
+            "score": 13,
+            "mod": 1,
+            "save": true
+        },
+        "intelligence": {
+            "score": 10,
+            "mod": 0,
+            "save": false
+        },
+        "charisma": {
+            "score": 16,
+            "mod": 3,
+            "save": true
+        }
+    },
+    "skillproficiencies": {
+        "acrobatics": false,
+        "animalhandling": false,
+        "arcana": true,
+        "athletics": false,
+        "deception": true,
+        "history": true,
+        "insight": false,
+        "intimidation": true,
+        "investigation": false,
+        "medicine": false,
+        "nature": false,
+        "perception": true,
+        "performance": false,
+        "persuasion": false,
+        "religion": false,
+        "sleightofhand": false,
+        "stealth": false,
+        "survival": false
+    },
+    "features": [
+        {
+            "name": "Trance",
+            "source": "Elf",
+            "text": "Rather than taking long rests, I go into a meditative trance for four hours per day."
+        },
+        {
+            "name": "Darkvision",
+            "source": "Elf",
+            "text": "I can see in dim light within 60 feed as if it were bright light, and in darkness as if it were dim light."
+        },
+        {
+            "name": "Fey Ancestry",
+            "source": "Elf",
+            "text": "I have advantage on saves against being charmed, and I cannot be put to sleep using magic."
+        },
+        {
+            "name": "Incisive Sense",
+            "source": "Pallid Elf",
+            "text": "I have advantage on Insight and Investigation ability checks."
+        },
+        {
+            "name": "Fey Presence",
+            "source": "Archfey Patron",
+            "text": "As an action, cause all creatures in a 10' cube in front of me to make a Wisdom save against my warlock spell save DC. On failure, they are charmed or frightened until the end of my next turn."
+        },
+        {
+            "name": "Researcher",
+            "source": "Sage",
+            "text": "When I attempt to learn or recall a piece of lore, if I don't know it, I often know where and from whom I can obtain it. Usually this is a library, university, or other learned individual. The DM might rule that it is inaccessible or does not exist."
+        }
+    ],
+    "languages": [
+        "Common",
+        "Elvish",
+        "Marquesian",
+        "Goblin"
+    ],
+    "proficiencies": [
+        "Light Armor",
+        "Simple Weapons"
+    ],
+    "personality": {
+        "ideal": "It is my duty to fulfill the tasks set before me.",
+        "flaw": "I miss the luxuries I was accustomed to, and rarely pass up an opportunity to indulge in them again.",
+        "traits": [
+            "I'm curious; I like knowing and being in the know.",
+            "I'm clean; the dirt and sweat of a life on the road does not suit me."
+        ],
+        "bonds": [
+            "I am honor bound to fulfill my good friend Il'viranya’s dying request.",
+            "I owe Llyrethe my life, and trust her implicitly."
+        ]
+    },
+    "invocations": [
+        {
+            "name": "Agonizing Blast",
+            "text": "I add my charisma modifier to Eldritch Blast damage."
+        },
+        {
+            "name": "Mask of Many Faces",
+            "text": "I can cast disguise self at will without expending a spell slot."
+        }
+    ],
+    "spells": {
+        "pretext": "2 spell slots, regained on short rest",
+        "levels": [
+            [
+                {
+                    "name": "Eldritch Blast"
+                },
+                {
+                    "name": "Prestidigitation"
+                },
+                {
+                    "name": "Light",
+                    "source": "Blessing of the Moonweaver"
+                },
+                {
+                    "name": "Guidance",
+                    "source": "Pact of the Tome"
+                },
+                {
+                    "name": "Minor Illusion",
+                    "source": "Pact of the Tome"
+                },
+                {
+                    "name": "Shocking Grasp",
+                    "source": "Pact of the Tome"
+                }
+            ],
+            [
+                {
+                    "name": "Sleep",
+                    "source": "Blessing of the Moonweaver",
+                    "note": "once per long rest"
+                },
+                {
+                    "name": "Hex"
+                },
+                {
+                    "name": "Hellish Rebuke"
+                }
+            ],
+            [
+                {
+                    "name": "Misty Step",
+                    "source": ""
+                }
+            ]
+        ]
+    },
+    "equipment": [
+        "Staff (arcane focus)",
+        "Shortbow with 20 arrows",
+        "Daggers (2)",
+        "Handaxe",
+        "Leather armor",
+        "Backpack",
+        "Crowbar",
+        "Hammer",
+        "Pitons (10)",
+        "Torches (10)",
+        "Tinderbox",
+        "Rations (10 days)",
+        "Waterskin",
+        "Hempen rope (50')",
+        "Bottle of black ink",
+        "Quill",
+        "Small knife",
+        "A letter from Il'viranya, warning of an impending calamity",
+        "Common clothes",
+        "10 gp"
+    ]
+}
