@@ -10,6 +10,11 @@ body {
     width: 80%;
 }
 
+#flavortext p {
+    font-style: italic;
+    text-align: center;
+}
+
 #topmatter p {
     text-align: center;
     line-height: 0.8em;
@@ -48,4 +53,10 @@ table .check {
 
 .own-row {
     display: inline-block;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #919191;
 }

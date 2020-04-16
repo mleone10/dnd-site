@@ -7,6 +7,9 @@
     </head>
     <body>
         <h1>Letheryl</h1>
+        <div id="flavortext">
+            <p>"No, I can't say this is exactly my 'comfort zone' - we departed <b>that</b> happy Grove quite some time ago.  But I suppose it's all fallen on me, hmm?  'An elf bleeds the same as anyone,' as they say, so I've got quite a weight on my shoulders..."</p>
+        </div>
         <div class="flex-container">
             <div class="flex-item">
                 <div id="topmatter">
@@ -140,7 +143,7 @@
                         <td class="str">Insight</td>
                         <td class="str">Wis</td>
                         <td class="num">+1</td>
-                        <td class="check"><input type="checkbox" onclick="return false;" checked />
+                        <td class="check"><input type="checkbox" onclick="return false;" />
                     </tr>
                     <tr>
                         <td class="str">Intimidation</td>
@@ -152,7 +155,7 @@
                         <td class="str">Investigation</td>
                         <td class="str">Int</td>
                         <td class="num">+0</td>
-                        <td class="check"><input type="checkbox" onclick="return false;" checked />
+                        <td class="check"><input type="checkbox" onclick="return false;" />
                     </tr>
                     <tr>
                         <td class="str">Medicine</td>
@@ -215,17 +218,18 @@
             <div id="features-traits">
                 <h3>Features and Traits</h3>
                 <ul>
-                    <li>Advantage against being charmed</li>
-                    <li>Cannot be put to sleep by magic</li>
-                    <li><b>Researcher: </b>When I attempt to learn or recall a piece of lore, if I don't know it, I often know where and from whom I can obtain it.  Usually this is a library, university, or other learned individual.  The DM might rule that it is inaccessible or does not exist.</li>
-                    <li><b>Trance: </b>Rather than taking long rests, I go into a meditative trance for four hours per day.</li>
-                    <li><b>Darkvision: </b>I can see in dim light within 60 feed as if it were bright light, and in darkness as if it were dim light.</li>
+                    <li><b>Trance:</b> <i>(Elf)</i> Rather than taking long rests, I go into a meditative trance for four hours per day.</li>
+                    <li><b>Darkvision:</b> <i>(Elf)</i> I can see in dim light within 60 feed as if it were bright light, and in darkness as if it were dim light.</li>
+                    <li><b>Fey Ancestry</b> <i>(Elf)</i> I have advantage on saves against being charmed, and I cannot be put to sleep using magic.</li>
+                    <li><b>Incisive Sense</b> <i>(Pallid Elf)</i> I have advantage on Insight and Investigation ability checks.</li>
+                    <li><b>Fey Presence</b> <i>(Archfey Patron)</i> As an action, cause all creatures in a 10' cube in front of me to make a Wisdom save against my warlock spell save DC.  On failure, they are charmed or frightened until the end of my next turn.</li>
+                    <li><b>Researcher:</b> <i>(Sage)</i> When I attempt to learn or recall a piece of lore, if I don't know it, I often know where and from whom I can obtain it.  Usually this is a library, university, or other learned individual.  The DM might rule that it is inaccessible or does not exist.</li>
                 </ul>
             </div>
             <div id="proficiencies">
                 <h3>Proficiencies and Languages</h3>
                 <ul>
-                    <li><b>Languages: </b>Common, Elvish, TBD, TBD</li>
+                    <li><b>Languages: </b>Common, Elvish, Marquesian, Goblin</li>
                     <li>Light Armor</li>
                     <li>Simple Weapons</li>
                 </ul>
@@ -233,10 +237,55 @@
             <div id="personality">
                 <h3>Personality</h3>
                 <ul>
-                    <li><b>Trait: </b>There's nothing I like more than a good mystery.</li>
-                    <li><b>Ideals: </b>Self-improvement; the goal of a life of study is the bettermend of oneself.</li>
-                    <li><b>Bonds: </b>I've been searching my whole life for the answer to a certain question.</li>
-                    <li><b>Flaws: </b>I am easily distracted by the promise of information.</li>
+                    <li><b>Ideal:</b> It is my duty to fulfill the tasks set before me.</li>
+                    <li><b>Flaw:</b> I miss the luxuries I was accustomed to, and rarely pass up an opportunity to indulge in them again.</li>
+                    <li><b>Traits:</b>
+                        <ul>
+                            <li>I'm curious; I like knowing and being in the know.</li>
+                            <li>I'm clean; the dirt and sweat of a life on the road does not suit me.</li>
+                        </ul>
+                    </li>
+                    <li><b>Bonds:</b>
+                        <ul>
+                            <li>I am honor bound to fulfill my good friend Il'viranya’s dying request.</li>
+                            <li>I owe Llyrethe my life, and trust her implicitly.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="invocations">
+                <h3>Invocations</h3>
+                <ul>
+                    <li><b>Agaonizing Blast: </b>I add my charisma modifier to Eldritch Blast damage.</li>
+                    <li><b>Mask of Many Faces: </b>I can cast <i>disguise self</i> at will without expending a spell slot.</li>
+                </ul>
+            </div>
+            <div id="spells">
+                <h3>Spells</h3>
+                <i>2 spells slots, regained on short rest</i>
+                <ul>
+                    <li>Level 0
+                        <ul>
+                            <li>Eldritch Blast</li>
+                            <li>Prestidigitation</li>
+                            <li>Light <i>(Blessing of the Moon Weaver)</i></li>
+                            <li>Guidance <i>(Pact of the Tome)</i></li>
+                            <li>Minor Illusion <i>(Pact of the Tome)</i></li>
+                            <li>Shocking Grasp <i>(Pact of the Tome)</i></li>
+                        </ul>
+                    </li>
+                    <li>Level 1
+                        <ul>
+                            <li>Sleep <i>(Blessing of the Moon Weaver; once per long rest)</i></li>
+                            <li>Hex</li>
+                            <li>Hellish Rebuke</li>
+                        </ul>
+                    </li>
+                    <li>Level 2
+                        <ul>
+                            <li>Misty Step</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <div id="equipment">
@@ -264,37 +313,9 @@
                     <li>10gp</li>
                 </ul>
             </div>
-            <div id="invocations">
-                <h3>Invocations</h3>
-                <ul>
-                    <li><b>Agaonizing Blast: </b>Add my charisma modifier to Eldritch Blast damage</li>
-                    <li><b>Mask of Many Faces: </b>I can cast <i>disguise self</i> at will without expending a spell slot</li>
-                </ul>
-            </div>
-            <div id="spells">
-                <h3>Spells</h3>
-                <ul>
-                    <li>Level 0
-                        <ul>
-                            <li>Light (racial)</li>
-                            <li>Eldritch Blast</li>
-                            <li>Prestidigitation</li>
-                        </ul>
-                    </li>
-                    <li>Level 1
-                        <ul>
-                            <li>Sleep (racial; once per long rest)</li>
-                            <li>Hex</li>
-                            <li>Hellish Rebuke</li>
-                        </ul>
-                    </li>
-                    <li>Level 2
-                        <ul>
-                            <li>Misty Step</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
         </div>
+        <footer>
+            Copyright &copy; 2020 Mario Leone
+        </footer>
     </body>
 </html>
