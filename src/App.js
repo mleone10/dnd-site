@@ -21,9 +21,13 @@ function CharacterName(props) {
 function FlavorText(props) {
   return (
     <div id="flavortext">
-      <p dangerouslySetInnerHTML={{ __html: FLAVOR_TEXT }} />
+      <p dangerouslySetInnerHTML={{ __html: props.content }} />
     </div>
   );
+}
+
+function getFlavorText() {
+  return FLAVOR_TEXT;
 }
 
 export default App;
