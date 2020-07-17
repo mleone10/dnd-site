@@ -1,328 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Letheryl - Character Sheet</title>
-        <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0" />
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="index.css">
-        <link rel="icon" href="%PUBLIC_URL%/favicon.ico">
-        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    </head>
-    <body>
-        <noscript>JavaScript is required to run this character sheet."</noscript>
-        <div id="root"></div>
-        <!--
-        <h1>Letheryl</h1>
-        <div id="flavortext">
-            <p>"No, I can't say this is exactly my 'comfort zone' - we departed <b>that</b> happy Grove quite some time ago.  But I suppose it's all fallen on me, hmm?  'An elf bleeds the same as anyone,' as they say, so I've got quite a weight on my shoulders..."</p>
+  <head>
+    <title>Letheryl - Character Sheet</title>
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0"
+    />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  </head>
+  <body>
+    <noscript>JavaScript is required to run this character sheet."</noscript>
+    <div id="root"></div>
+    <div class="flex-container">
+      <div class="flex-item" id="overview">
+        <div id="topmatter">
+          <p><b>Warlock 6</b></p>
+          <p><b>Male Pallid Elf</b></p>
+          <p><b>Sage (Researcher)</b></p>
         </div>
-        <div class="flex-container">
-            <div class="flex-item">
-                <div id="topmatter">
-                    <p><b>Warlock 3</b></p>
-                    <p><b>Male Pallid Elf</b></p>
-                    <p><b>Sage (Researcher)</b></p>
-                </div>
-                <div id="stats">
-                    <h3>Stats</h3>
-                    <table>
-                        <tr>
-                            <th>Stat</th>
-                            <th>Value</th>
-                        </tr>
-                        <tr>
-                            <td class="str">Proficiency Bonus</td>
-                            <td class="num">+2</td>
-                        </tr>
-                        <tr>
-                            <td class="str">Inspiration</td>
-                            <td class="num">0</td>
-                        </tr>
-                        <tr>
-                            <td class="str">Armor Class</td>
-                            <td class="num">13</td>
-                        </tr>
-                        <tr>
-                            <td class="str">Initiative</td>
-                            <td class="num">+2</td>
-                        </tr>
-                        <tr>
-                            <td class="str">Hit Points</td>
-                            <td class="num">24/24</td>
-                        </tr>
-                    </table>
-                </div>
-                <div id="abilities">
-                    <h3>Abilities</h3>
-                    <table>
-                        <tr>
-                            <th>Ability</th>
-                            <th>Score</th>
-                            <th>Mod</th>
-                            <th>Save</th>
-                        </tr>
-                        <tr>
-                            <td class="str">Strength</td>
-                            <td class="num">9</td>
-                            <td class="num">-1</td>
-                            <td class="check"><input type="checkbox" onclick="return false;" />
-                        </tr>
-                        <tr>
-                            <td class="str">Consitution</td>
-                            <td class="num">14</td>
-                            <td class="num">+2</td>
-                            <td class="check"><input type="checkbox" onclick="return false;" />
-                        </tr>
-                        <tr>
-                            <td class="str">Dexterity</td>
-                            <td class="num">14</td>
-                            <td class="num">+2</td>
-                            <td class="check"><input type="checkbox" onclick="return false;" />
-                        </tr>
-                        <tr>
-                            <td class="str">Wisdom</td>
-                            <td class="num">13</td>
-                            <td class="num">+1</td>
-                            <td class="check"><input type="checkbox" onclick="return false;" checked />
-                        </tr>
-                        <tr>
-                            <td class="str">Intelligence</td>
-                            <td class="num">10</td>
-                            <td class="num">+0</td>
-                            <td class="check"><input type="checkbox" onclick="return false;" />
-                        </tr>
-                        <tr>
-                            <td class="str">Charisma</td>
-                            <td class="num">16</td>
-                            <td class="num">+3</td>
-                            <td class="check"><input type="checkbox" onclick="return false;" checked />
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <div id="skills" class="flex-item">
-                <h3>Skills</h3>
-                <table>
-                    <tr>
-                        <th>Skill</th>
-                        <th>Ability</th>
-                        <th>Mod</th>
-                        <th>Prof</th>
-                    </tr>
-                    <tr>
-                        <td class="str">Acrobatics</td>
-                        <td class="str">Dex</td>
-                        <td class="num">+2</td>
-                        <td class="check"><input type="checkbox" onclick="return false;" />
-                    </tr>
-                    <tr>
-                        <td class="str">Animal Handling</td>
-                        <td class="str">Wis</td>
-                        <td class="num">+1</td>
-                        <td class="check"><input type="checkbox" onclick="return false;" />
-                    </tr>
-                    <tr>
-                        <td class="str">Arcana</td>
-                        <td class="str">Int</td>
-                        <td class="num">+0</td>
-                        <td class="check"><input type="checkbox" onclick="return false;" checked />
-                    </tr>
-                    <tr>
-                        <td class="str">Athletics</td>
-                        <td class="str">Str</td>
-                        <td class="num">-1</td>
-                        <td class="check"><input type="checkbox" onclick="return false;" />
-                    </tr>
-                    <tr>
-                        <td class="str">Deception</td>
-                        <td class="str">Cha</td>
-                        <td class="num">+3</td>
-                        <td class="check"><input type="checkbox" onclick="return false;" checked />
-                    </tr>
-                    <tr>
-                        <td class="str">History</td>
-                        <td class="str">Int</td>
-                        <td class="num">+0</td>
-                        <td class="check"><input type="checkbox" onclick="return false;" checked />
-                    </tr>
-                    <tr>
-                        <td class="str">Insight</td>
-                        <td class="str">Wis</td>
-                        <td class="num">+1</td>
-                        <td class="check"><input type="checkbox" onclick="return false;" />
-                    </tr>
-                    <tr>
-                        <td class="str">Intimidation</td>
-                        <td class="str">Cha</td>
-                        <td class="num">+3</td>
-                        <td class="check"><input type="checkbox" onclick="return false;" checked />
-                    </tr>
-                    <tr>
-                        <td class="str">Investigation</td>
-                        <td class="str">Int</td>
-                        <td class="num">+0</td>
-                        <td class="check"><input type="checkbox" onclick="return false;" />
-                    </tr>
-                    <tr>
-                        <td class="str">Medicine</td>
-                        <td class="str">Wis</td>
-                        <td class="num">+1</td>
-                        <td class="check"><input type="checkbox" onclick="return false;" />
-                    </tr>
-                    <tr>
-                        <td class="str">Nature</td>
-                        <td class="str">Int</td>
-                        <td class="num">+0</td>
-                        <td class="check"><input type="checkbox" onclick="return false;" />
-                    </tr>
-                    <tr>
-                        <td class="str">Perception</td>
-                        <td class="str">Wis</td>
-                        <td class="num">+1</td>
-                        <td class="check"><input type="checkbox" onclick="return false;" checked />
-                    </tr>
-                    <tr>
-                        <td class="str">Performance</td>
-                        <td class="str">Cha</td>
-                        <td class="num">+3</td>
-                        <td class="check"><input type="checkbox" onclick="return false;" />
-                    </tr>
-                    <tr>
-                        <td class="str">Persuasion</td>
-                        <td class="str">Cha</td>
-                        <td class="num">+3</td>
-                        <td class="check"><input type="checkbox" onclick="return false;" />
-                    </tr>
-                    <tr>
-                        <td class="str">Religion</td>
-                        <td class="str">Int</td>
-                        <td class="num">+0</td>
-                        <td class="check"><input type="checkbox" onclick="return false;" />
-                    </tr>
-                    <tr>
-                        <td class="str">Sleight of Hand</td>
-                        <td class="str">Dex</td>
-                        <td class="num">+2</td>
-                        <td class="check"><input type="checkbox" onclick="return false;" />
-                    </tr>
-                    <tr>
-                        <td class="str">Stealth</td>
-                        <td class="str">Dex</td>
-                        <td class="num">+2</td>
-                        <td class="check"><input type="checkbox" onclick="return false;" />
-                    </tr>
-                    <tr>
-                        <td class="str">Survival</td>
-                        <td class="str">Wis</td>
-                        <td class="num">+1</td>
-                        <td class="check"><input type="checkbox" onclick="return false;" />
-                    </tr>
-                </table>
-            </div>
+        <div id="stats">
+          <h3>Stats</h3>
+          <table>
+            <tr>
+              <th>Stat</th>
+              <th>Value</th>
+            </tr>
+            <tr>
+              <td class="str">Proficiency Bonus</td>
+              <td class="num">+3</td>
+            </tr>
+            <tr>
+              <td class="str">Inspiration</td>
+              <td class="num">0</td>
+            </tr>
+            <tr>
+              <td class="str">Armor Class</td>
+              <td class="num">13</td>
+            </tr>
+            <tr>
+              <td class="str">Initiative</td>
+              <td class="num">+2</td>
+            </tr>
+            <tr>
+              <td class="str">Hit Points</td>
+              <td class="num">45/45</td>
+            </tr>
+          </table>
         </div>
-        <div class="own-row">
-            <div id="features-traits">
-                <h3>Features and Traits</h3>
-                <ul>
-                    <li><b>Trance:</b> <i>(Elf)</i> Rather than taking long rests, I go into a meditative trance for four hours per day.</li>
-                    <li><b>Darkvision:</b> <i>(Elf)</i> I can see in dim light within 60 feed as if it were bright light, and in darkness as if it were dim light.</li>
-                    <li><b>Fey Ancestry</b> <i>(Elf)</i> I have advantage on saves against being charmed, and I cannot be put to sleep using magic.</li>
-                    <li><b>Incisive Sense</b> <i>(Pallid Elf)</i> I have advantage on Insight and Investigation ability checks.</li>
-                    <li><b>Fey Presence</b> <i>(Archfey Patron)</i> As an action, cause all creatures in a 10' cube in front of me to make a Wisdom save against my warlock spell save DC.  On failure, they are charmed or frightened until the end of my next turn.</li>
-                    <li><b>Researcher:</b> <i>(Sage)</i> When I attempt to learn or recall a piece of lore, if I don't know it, I often know where and from whom I can obtain it.  Usually this is a library, university, or other learned individual.  The DM might rule that it is inaccessible or does not exist.</li>
-                </ul>
-            </div>
-            <div id="proficiencies">
-                <h3>Proficiencies and Languages</h3>
-                <ul>
-                    <li><b>Languages: </b>Common, Elvish, Marquesian, Goblin</li>
-                    <li>Light Armor</li>
-                    <li>Simple Weapons</li>
-                </ul>
-            </div>
-            <div id="personality">
-                <h3>Personality</h3>
-                <ul>
-                    <li><b>Ideal:</b> It is my duty to fulfill the tasks set before me.</li>
-                    <li><b>Flaw:</b> I miss the luxuries I was accustomed to, and rarely pass up an opportunity to indulge in them again.</li>
-                    <li><b>Traits:</b>
-                        <ul>
-                            <li>I'm curious; I like knowing and being in the know.</li>
-                            <li>I'm clean; the dirt and sweat of a life on the road does not suit me.</li>
-                        </ul>
-                    </li>
-                    <li><b>Bonds:</b>
-                        <ul>
-                            <li>I am honor bound to fulfill my good friend Il'viranya’s dying request.</li>
-                            <li>I owe Llyrethe my life, and trust her implicitly.</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div id="invocations">
-                <h3>Invocations</h3>
-                <ul>
-                    <li><b>Agonizing Blast: </b>I add my charisma modifier to Eldritch Blast damage.</li>
-                    <li><b>Mask of Many Faces: </b>I can cast <i>disguise self</i> at will without expending a spell slot.</li>
-                </ul>
-            </div>
-            <div id="spells">
-                <h3>Spells</h3>
-                <i>2 spells slots, regained on short rest</i>
-                <ul>
-                    <li>Level 0
-                        <ul>
-                            <li>Eldritch Blast</li>
-                            <li>Prestidigitation</li>
-                            <li>Light <i>(Blessing of the Moon Weaver)</i></li>
-                            <li>Guidance <i>(Pact of the Tome)</i></li>
-                            <li>Minor Illusion <i>(Pact of the Tome)</i></li>
-                            <li>Shocking Grasp <i>(Pact of the Tome)</i></li>
-                        </ul>
-                    </li>
-                    <li>Level 1
-                        <ul>
-                            <li>Sleep <i>(Blessing of the Moon Weaver; once per long rest)</i></li>
-                            <li>Hex</li>
-                            <li>Hellish Rebuke</li>
-                        </ul>
-                    </li>
-                    <li>Level 2
-                        <ul>
-                            <li>Misty Step</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div id="equipment">
-                <h3>Equipment</h3>
-                <ul>
-                    <li>Staff (arcane focus)</li>
-                    <li>Shortbow with 20 arrows</li>
-                    <li>Daggers (2)</li>
-                    <li>Handaxe</li>
-                    <li>Leather armor</li>
-                    <li>Backpack</li>
-                    <li>Crowbar</li>
-                    <li>Hammer</li>
-                    <li>Pitons (10)</li>
-                    <li>Torches (10)</li>
-                    <li>Tinderbox</li>
-                    <li>Rations (10 days)</li>
-                    <li>Waterskin</li>
-                    <li>Hempen rope (50 feet)</li>
-                    <li>Bottle of black ink</li>
-                    <li>Quill</li>
-                    <li>Small knife</li>
-                    <li>A letter from a dead colleague posing a question I have not yet been able to answer</li>
-                    <li>Common clothes</li>
-                    <li>10gp</li>
-                </ul>
-            </div>
+        <div id="abilities">
+          <h3>Abilities</h3>
+          <table>
+            <tr>
+              <th>Ability</th>
+              <th>Score</th>
+              <th>Mod</th>
+              <th>Save</th>
+            </tr>
+            <tr>
+              <td class="str">Strength</td>
+              <td class="num">9</td>
+              <td class="num">-1</td>
+              <td class="check">
+                <input type="checkbox" onclick="return false;" />
+              </td>
+            </tr>
+
+            <tr>
+              <td class="str">Consitution</td>
+              <td class="num">14</td>
+              <td class="num">+2</td>
+              <td class="check">
+                <input type="checkbox" onclick="return false;" />
+              </td>
+            </tr>
+
+            <tr>
+              <td class="str">Dexterity</td>
+              <td class="num">14</td>
+              <td class="num">+2</td>
+              <td class="check">
+                <input type="checkbox" onclick="return false;" />
+              </td>
+            </tr>
+
+            <tr>
+              <td class="str">Wisdom</td>
+              <td class="num">13</td>
+              <td class="num">+1</td>
+              <td class="check">
+                <input type="checkbox" onclick="return false;" checked />
+              </td>
+            </tr>
+
+            <tr>
+              <td class="str">Intelligence</td>
+              <td class="num">10</td>
+              <td class="num">+0</td>
+              <td class="check">
+                <input type="checkbox" onclick="return false;" />
+              </td>
+            </tr>
+
+            <tr>
+              <td class="str">Charisma</td>
+              <td class="num">18</td>
+              <td class="num">+4</td>
+              <td class="check">
+                <input type="checkbox" onclick="return false;" checked />
+              </td>
+            </tr>
+          </table>
         </div>
-        <footer>
-            Copyright &copy; 2020 Mario Leone
-        </footer>
-        -->
-    </body>
+      </div>
+      <div id="skills" class="flex-item">
+        <h3>Skills</h3>
+        <table>
+          <tr>
+            <th>Skill</th>
+            <th>Ability</th>
+            <th>Mod</th>
+            <th>Prof</th>
+          </tr>
+          <tr>
+            <td class="str">Acrobatics</td>
+            <td class="str">Dex</td>
+            <td class="num">+2</td>
+            <td class="check">
+              <input type="checkbox" onclick="return false;" />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="str">Animal Handling</td>
+            <td class="str">Wis</td>
+            <td class="num">+1</td>
+            <td class="check">
+              <input type="checkbox" onclick="return false;" />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="str">Arcana</td>
+            <td class="str">Int</td>
+            <td class="num">+0</td>
+            <td class="check">
+              <input type="checkbox" onclick="return false;" checked />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="str">Athletics</td>
+            <td class="str">Str</td>
+            <td class="num">-1</td>
+            <td class="check">
+              <input type="checkbox" onclick="return false;" />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="str">Deception</td>
+            <td class="str">Cha</td>
+            <td class="num">+4</td>
+            <td class="check">
+              <input type="checkbox" onclick="return false;" checked />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="str">History</td>
+            <td class="str">Int</td>
+            <td class="num">+0</td>
+            <td class="check">
+              <input type="checkbox" onclick="return false;" checked />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="str">Insight</td>
+            <td class="str">Wis</td>
+            <td class="num">+1</td>
+            <td class="check">
+              <input type="checkbox" onclick="return false;" />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="str">Intimidation</td>
+            <td class="str">Cha</td>
+            <td class="num">+4</td>
+            <td class="check">
+              <input type="checkbox" onclick="return false;" checked />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="str">Investigation</td>
+            <td class="str">Int</td>
+            <td class="num">+0</td>
+            <td class="check">
+              <input type="checkbox" onclick="return false;" />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="str">Medicine</td>
+            <td class="str">Wis</td>
+            <td class="num">+1</td>
+            <td class="check">
+              <input type="checkbox" onclick="return false;" />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="str">Nature</td>
+            <td class="str">Int</td>
+            <td class="num">+0</td>
+            <td class="check">
+              <input type="checkbox" onclick="return false;" />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="str">Perception</td>
+            <td class="str">Wis</td>
+            <td class="num">+1</td>
+            <td class="check">
+              <input type="checkbox" onclick="return false;" checked />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="str">Performance</td>
+            <td class="str">Cha</td>
+            <td class="num">+4</td>
+            <td class="check">
+              <input type="checkbox" onclick="return false;" />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="str">Persuasion</td>
+            <td class="str">Cha</td>
+            <td class="num">+4</td>
+            <td class="check">
+              <input type="checkbox" onclick="return false;" />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="str">Religion</td>
+            <td class="str">Int</td>
+            <td class="num">+0</td>
+            <td class="check">
+              <input type="checkbox" onclick="return false;" />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="str">Sleight of Hand</td>
+            <td class="str">Dex</td>
+            <td class="num">+2</td>
+            <td class="check">
+              <input type="checkbox" onclick="return false;" />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="str">Stealth</td>
+            <td class="str">Dex</td>
+            <td class="num">+2</td>
+            <td class="check">
+              <input type="checkbox" onclick="return false;" />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="str">Survival</td>
+            <td class="str">Wis</td>
+            <td class="num">+1</td>
+            <td class="check">
+              <input type="checkbox" onclick="return false;" />
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="own-row">
+      <div id="features-traits">
+        <h3>Features and Traits</h3>
+        <ul>
+          <li>
+            <b>Trance:</b> <i>(Elf)</i> Rather than taking long rests, I go into
+            a meditative trance for four hours per day.
+          </li>
+          <li>
+            <b>Darkvision:</b> <i>(Elf)</i> I can see in dim light within 60
+            feed as if it were bright light, and in darkness as if it were dim
+            light.
+          </li>
+          <li>
+            <b>Fey Ancestry</b> <i>(Elf)</i> I have advantage on saves against
+            being charmed, and I cannot be put to sleep using magic.
+          </li>
+          <li>
+            <b>Incisive Sense</b> <i>(Pallid Elf)</i> I have advantage on
+            Insight and Investigation ability checks.
+          </li>
+          <li>
+            <b>Fey Presence</b> <i>(Archfey Patron)</i> As an action, cause all
+            creatures in a 10' cube in front of me to make a Wisdom save against
+            my warlock spell save DC. On failure, they are charmed or frightened
+            until the end of my next turn.
+          </li>
+          <li>
+            <b>Misty Escape</b> <i>(Archfey Patron)</i> When I take damage, use
+            my reaction to turn invisible and teleport up to 60' to an
+            unoccupied space I can see. Remain invisible until the start of my
+            next turn or until I attack/cast a spell. Once per short/long rest.
+          </li>
+          <li>
+            <b>Researcher:</b> <i>(Sage)</i> When I attempt to learn or recall a
+            piece of lore, if I don't know it, I often know where and from whom
+            I can obtain it. Usually this is a library, university, or other
+            learned individual. The DM might rule that it is inaccessible or
+            does not exist.
+          </li>
+        </ul>
+      </div>
+      <div id="proficiencies">
+        <h3>Proficiencies and Languages</h3>
+        <ul>
+          <li><b>Languages: </b>Common, Elvish, Marquesian, Goblin</li>
+          <li>Light Armor</li>
+          <li>Simple Weapons</li>
+        </ul>
+      </div>
+      <div id="personality">
+        <h3>Personality</h3>
+        <ul>
+          <li>
+            <b>Ideal:</b> It is my duty to fulfill the tasks set before me.
+          </li>
+          <li>
+            <b>Flaw:</b> I miss the luxuries I was accustomed to, and rarely
+            pass up an opportunity to indulge in them again.
+          </li>
+          <li>
+            <b>Traits:</b>
+            <ul>
+              <li>I'm curious; I like knowing and being in the know.</li>
+              <li>
+                I'm clean; the dirt and sweat of a life on the road does not
+                suit me.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b>Bonds:</b>
+            <ul>
+              <li>
+                I am honor bound to fulfill my good friend Il'viranya’s dying
+                request.
+              </li>
+              <li>I owe Llyrethe my life, and trust her implicitly.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="invocations">
+        <h3>Invocations</h3>
+        <ul>
+          <li>
+            <b>Agonizing Blast: </b>I add my charisma modifier to Eldritch Blast
+            damage.
+          </li>
+          <li>
+            <b>Mask of Many Faces: </b>I can cast <i>disguise self</i> at will
+            without expending a spell slot.
+          </li>
+          <li>
+            <b>Book of Ancient Secrets: </b>I can inscribe rituals in my Book of
+            Shadows. Rituals can be from any class's spell list, can only be
+            cast as rituals, and must be of a level equal to or less than half
+            of my warlock level (rounded up).
+          </li>
+        </ul>
+      </div>
+      <div id="spells">
+        <h3>Spells</h3>
+        <i>2 spells slots, regained on short rest</i>
+        <ul>
+          <li>
+            Level 0
+            <ul>
+              <li>Eldritch Blast</li>
+              <li>Mage Hand</li>
+              <li>Prestidigitation</li>
+              <li>Light <i>(Blessing of the Moon Weaver)</i></li>
+              <li>Guidance <i>(Pact of the Tome)</i></li>
+              <li>Minor Illusion <i>(Pact of the Tome)</i></li>
+              <li>Shocking Grasp <i>(Pact of the Tome)</i></li>
+            </ul>
+          </li>
+          <li>
+            Level 1
+            <ul>
+              <li>Armor of Agathys</li>
+              <li>Hellish Rebuke</li>
+              <li>Hex</li>
+              <li>
+                Sleep <i>(Blessing of the Moon Weaver; once per long rest)</i>
+              </li>
+              <li><i>(Ritual)</i> Detect Magic</li>
+              <li><i>(Ritual)</i> Find Familiar</li>
+            </ul>
+          </li>
+          <li>
+            Level 2
+            <ul>
+              <li>Invisibility</li>
+              <li>Misty Step</li>
+            </ul>
+          </li>
+          <li>
+            Level 3
+            <ul>
+              <li>Counterspell</li>
+              <li>Fly</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="equipment">
+        <h3>Equipment</h3>
+        <ul>
+          <li>Staff (arcane focus)</li>
+          <li>Rod of the Pact Keeper +1</li>
+          <li>Healing Potion</li>
+          <li>Shortbow with 20 arrows</li>
+          <li>Daggers (2)</li>
+          <li>Handaxe</li>
+          <li>Leather armor</li>
+          <li>Backpack</li>
+          <li>Crowbar</li>
+          <li>Hammer</li>
+          <li>Pitons (10)</li>
+          <li>Torches (10)</li>
+          <li>Tinderbox</li>
+          <li>Rations (10 days)</li>
+          <li>Waterskin</li>
+          <li>Hempen rope (50 feet)</li>
+          <li>Bottle of black ink</li>
+          <li>Quill</li>
+          <li>Small knife</li>
+          <li>
+            A letter from a dead colleague posing a question I have not yet been
+            able to answer
+          </li>
+          <li>Common clothes</li>
+          <li>Tiny flask of whiskey</li>
+          <li>175gp</li>
+          <li>375gp in casino credit</li>
+        </ul>
+      </div>
+    </div>
+    <footer>
+      Copyright &copy; 2020 Mario Leone
+    </footer>
+  </body>
 </html>
