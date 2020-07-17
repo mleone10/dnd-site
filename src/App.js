@@ -1,4 +1,5 @@
 import React from "react";
+import QuantatativeStats from "./QuantatativeStats";
 
 const FLAVOR_TEXT =
   "\"No, I can't say this is exactly my 'comfort zone' - we departed <b>that</b> happy Grove quite some time ago. But I suppose it's all fallen on me, hmm? 'An elf bleeds the same as anyone,' as they say, so I've got quite a weight on my shoulders...\"";
@@ -9,6 +10,7 @@ class App extends React.Component {
       <div className="App">
         <CharacterName name="Letheryl" />
         <FlavorText content={getFlavorText()} />
+        <QuantatativeStats />
       </div>
     );
   }
