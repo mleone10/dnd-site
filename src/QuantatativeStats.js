@@ -5,11 +5,17 @@ class QuantatativeStats extends React.Component {
     return (
       <div className="flex-container">
         <div className="flex-item" id="overview">
-          <TopMatter content={getTopMatter()} />
-          <Stats abilities={getAbilities()}/>
-          <Abilities abilities={getAbilities()} />
+          <TopMatter charInfo={this.props.charInfo} />
+          <Stats
+            abilities={this.props.abilities}
+            charInfo={this.props.charInfo}
+          />
+          <Abilities abilities={this.props.abilities} />
         </div>
-        <Skills abilities={getAbilities()} />
+        <Skills
+          abilities={this.props.abilities}
+          skills={this.props.skillProf}
+        />
       </div>
     );
   }
@@ -18,20 +24,22 @@ class QuantatativeStats extends React.Component {
 function TopMatter(props) {
   return (
     <div id="topmatter">
-      <p>
-        <b>
-          {props.content.class} {props.content.level}
-        </b>
-      </p>
-      <p>
-        <b>
-          {props.content.gender} {props.content.race}
-        </b>
-      </p>
-      <p>
-        <b>{props.content.background}</b>
-      </p>
+      <TopMatterItem
+        value={props.charInfo.class + " " + props.charInfo.level}
+      />
+      <TopMatterItem
+        value={props.charInfo.gender + " " + props.charInfo.race}
+      />
+      <TopMatterItem value={props.charInfo.background} />
     </div>
+  );
+}
+
+function TopMatterItem(props) {
+  return (
+    <p>
+      <b>{props.value}</b>
+    </p>
   );
 }
 
@@ -45,11 +53,25 @@ function Stats(props) {
             <th>Stat</th>
             <th>Value</th>
           </tr>
-          <Stat name="Proficiency Bonus" value={prependSignChar(3)} />
+          <Stat
+            name="Proficiency Bonus"
+            value={prependSignChar(props.charInfo.profBonus)}
+          />
           <Stat name="Inspiration" value={0} />
-          <Stat name="Armor Class" value={11 + calculateAbilityMod(props.abilities.dex.score)} />
-          <Stat name="Initiative" value={prependSignChar(calculateAbilityMod(props.abilities.dex.score))} />
-          <Stat name="Hit Points" value="45/45" />
+          <Stat
+            name="Armor Class"
+            value={11 + calculateAbilityMod(props.abilities.dex.score)}
+          />
+          <Stat
+            name="Initiative"
+            value={prependSignChar(
+              calculateAbilityMod(props.abilities.dex.score)
+            )}
+          />
+          <Stat
+            name="Hit Points"
+            value={props.charInfo.hpCur + "/" + props.charInfo.hpMax}
+          />
         </tbody>
       </table>
     </div>
@@ -94,7 +116,9 @@ function Ability(props) {
     <tr>
       <td className="str">{props.ability.name}</td>
       <td className="num">{props.ability.score}</td>
-      <td className="num">{prependSignChar(calculateAbilityMod(props.ability.score))}</td>
+      <td className="num">
+        {prependSignChar(calculateAbilityMod(props.ability.score))}
+      </td>
       <td className="check">
         <input
           type="checkbox"
@@ -118,44 +142,96 @@ function Skills(props) {
             <th>Mod</th>
             <th>Prof</th>
           </tr>
-          <Skill name="Acrobatics" ability={props.abilities.dex} prof={false} />
+          <Skill
+            name="Acrobatics"
+            ability={props.abilities.dex}
+            prof={props.skills.acrobatics}
+          />
           <Skill
             name="Animal Handling"
             ability={props.abilities.wis}
-            prof={false}
+            prof={props.skills.animalhandling}
           />
-          <Skill name="Arcana" ability={props.abilities.int} prof={true} />
-          <Skill name="Athletics" ability={props.abilities.str} prof={false} />
-          <Skill name="Deception" ability={props.abilities.cha} prof={true} />
-          <Skill name="History" ability={props.abilities.int} prof={true} />
-          <Skill name="Insight" ability={props.abilities.wis} prof={false} />
+          <Skill
+            name="Arcana"
+            ability={props.abilities.int}
+            prof={props.skills.arcana}
+          />
+          <Skill
+            name="Athletics"
+            ability={props.abilities.str}
+            prof={props.skills.athletics}
+          />
+          <Skill
+            name="Deception"
+            ability={props.abilities.cha}
+            prof={props.skills.deception}
+          />
+          <Skill
+            name="History"
+            ability={props.abilities.int}
+            prof={props.skills.history}
+          />
+          <Skill
+            name="Insight"
+            ability={props.abilities.wis}
+            prof={props.skills.insight}
+          />
           <Skill
             name="Intimidation"
             ability={props.abilities.cha}
-            prof={true}
+            prof={props.skills.intimidation}
           />
           <Skill
             name="Investigation"
             ability={props.abilities.int}
-            prof={false}
+            prof={props.skills.investigation}
           />
-          <Skill name="Medicine" ability={props.abilities.wis} prof={false} />
-          <Skill name="Nature" ability={props.abilities.int} prof={false} />
-          <Skill name="Perception" ability={props.abilities.wis} prof={true} />
+          <Skill
+            name="Medicine"
+            ability={props.abilities.wis}
+            prof={props.skills.medicine}
+          />
+          <Skill
+            name="Nature"
+            ability={props.abilities.int}
+            prof={props.skills.nature}
+          />
+          <Skill
+            name="Perception"
+            ability={props.abilities.wis}
+            prof={props.skills.perception}
+          />
           <Skill
             name="Performance"
             ability={props.abilities.cha}
-            prof={false}
+            prof={props.skills.performance}
           />
-          <Skill name="Persuasion" ability={props.abilities.cha} prof={false} />
-          <Skill name="Religion" ability={props.abilities.int} prof={false} />
+          <Skill
+            name="Persuasion"
+            ability={props.abilities.cha}
+            prof={props.skills.persuasion}
+          />
+          <Skill
+            name="Religion"
+            ability={props.abilities.int}
+            prof={props.skills.religion}
+          />
           <Skill
             name="Sleight of Hand"
             ability={props.abilities.dex}
-            prof={false}
+            prof={props.skills.sleightofhand}
           />
-          <Skill name="Stealth" ability={props.abilities.dex} prof={false} />
-          <Skill name="Survival" ability={props.abilities.wis} prof={false} />
+          <Skill
+            name="Stealth"
+            ability={props.abilities.dex}
+            prof={props.skills.stealth}
+          />
+          <Skill
+            name="Survival"
+            ability={props.abilities.wis}
+            prof={props.skills.survival}
+          />
         </tbody>
       </table>
     </div>
@@ -167,7 +243,9 @@ function Skill(props) {
     <tr>
       <td className="str">{props.name}</td>
       <td className="str">{props.ability.abr}</td>
-      <td className="num">{prependSignChar(calculateAbilityMod(props.ability.score))}</td>
+      <td className="num">
+        {prependSignChar(calculateAbilityMod(props.ability.score))}
+      </td>
       <td className="check">
         <input
           type="checkbox"
@@ -177,57 +255,6 @@ function Skill(props) {
       </td>
     </tr>
   );
-}
-
-function getTopMatter() {
-  return {
-    class: "Warlock",
-    level: 6,
-    gender: "Male",
-    race: "Pallid Elf",
-    background: "Sage (Researcher)",
-  };
-}
-
-function getAbilities() {
-  return {
-    str: {
-      name: "Strength",
-      abr: "Str",
-      score: 9,
-      save: false,
-    },
-    con: {
-      name: "Constitution",
-      abr: "Con",
-      score: 14,
-      save: false,
-    },
-    dex: {
-      name: "Dexterity",
-      abr: "Dex",
-      score: 14,
-      save: false,
-    },
-    wis: {
-      name: "Wisdom",
-      abr: "Wis",
-      score: 13,
-      save: true,
-    },
-    int: {
-      name: "Intelligence",
-      abr: "Int",
-      score: 10,
-      save: false,
-    },
-    cha: {
-      name: "Charisma",
-      abr: "Cha",
-      score: 18,
-      save: true,
-    },
-  };
 }
 
 function calculateAbilityMod(score) {
