@@ -57,10 +57,12 @@ function Stats(props) {
             name="Proficiency Bonus"
             value={prependSignChar(props.charInfo.profBonus)}
           />
-          <Stat name="Inspiration" value={0} />
           <Stat
             name="Armor Class"
-            value={11 + calculateAbilityMod(props.abilities.dex.score)}
+            value={
+              props.charInfo.baseAC +
+              calculateAbilityMod(props.abilities.dex.score)
+            }
           />
           <Stat
             name="Initiative"

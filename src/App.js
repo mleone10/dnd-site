@@ -50,6 +50,7 @@ const CHAR_INFO = {
   profBonus: 3,
   hpMax: 45,
   hpCur: 45,
+  baseAC: 11,
 };
 const SKILLS = {
   acrobatics: { name: "Acrobatics", prof: false, adv: false, modKey: "dex" },
