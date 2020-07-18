@@ -9,8 +9,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <CharacterName name="Letheryl" />
-        <FlavorText content={getFlavorText()} />
+        <FlavorText />
         <QuantatativeStats />
+        <Footer />
       </div>
     );
   }
@@ -23,9 +24,13 @@ function CharacterName(props) {
 function FlavorText(props) {
   return (
     <div id="flavortext">
-      <p dangerouslySetInnerHTML={{ __html: props.content }} />
+      <p dangerouslySetInnerHTML={{ __html: getFlavorText() }} />
     </div>
   );
+}
+
+function Footer(props) {
+  return <footer>Copyright &copy; 2020 Mario Leone</footer>;
 }
 
 function getFlavorText() {
