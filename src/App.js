@@ -51,25 +51,40 @@ const CHAR_INFO = {
   hpMax: 45,
   hpCur: 45,
 };
-const SKILL_PROF = {
-  acrobatics: false,
-  animalhandling: false,
-  arcana: true,
-  athletics: false,
-  deception: true,
-  history: true,
-  insight: false,
-  intimidation: true,
-  investigation: false,
-  medicine: false,
-  nature: false,
-  perception: true,
-  performance: false,
-  persuasion: false,
-  religion: false,
-  sleightofhand: false,
-  stealth: false,
-  survival: false,
+const SKILLS = {
+  acrobatics: { name: "Acrobatics", prof: false, adv: false, modKey: "dex" },
+  animalhandling: {
+    name: "Animal Handling",
+    prof: false,
+    adv: false,
+    modKey: "wis",
+  },
+  arcana: { name: "Arcana", prof: true, adv: false, modKey: "int" },
+  athletics: { name: "Athletics", prof: false, adv: false, modKey: "str" },
+  deception: { name: "Deception", prof: true, adv: false, modKey: "cha" },
+  history: { name: "History", prof: true, adv: false, modKey: "int" },
+  insight: { name: "Insight", prof: false, adv: true, modKey: "wis" },
+  intimidation: { name: "Intimidation", prof: true, adv: false, modKey: "cha" },
+  investigation: {
+    name: "Investigation",
+    prof: false,
+    adv: true,
+    modKey: "int",
+  },
+  medicine: { name: "Medicine", prof: false, adv: false, modKey: "wis" },
+  nature: { name: "Nature", prof: false, adv: false, modKey: "int" },
+  perception: { name: "Perception", prof: true, adv: false, modKey: "wis" },
+  performance: { name: "Performance", prof: false, adv: false, modKey: "cha" },
+  persuasion: { name: "Persuasion", prof: false, adv: false, modKey: "cha" },
+  religion: { name: "Religion", prof: false, adv: false, modKey: "int" },
+  sleightofhand: {
+    name: "Sleight of Hand",
+    prof: false,
+    adv: false,
+    modKey: "dex",
+  },
+  stealth: { name: "Stealth", prof: false, adv: false, modKey: "dex" },
+  survival: { name: "Survival", prof: false, adv: false, modKey: "wis" },
 };
 
 class App extends React.Component {
@@ -81,7 +96,7 @@ class App extends React.Component {
         <QuantatativeStats
           abilities={ABILITIES}
           charInfo={CHAR_INFO}
-          skillProf={SKILL_PROF}
+          skillProf={SKILLS}
         />
         <Footer />
       </div>

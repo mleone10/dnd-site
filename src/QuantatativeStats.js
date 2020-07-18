@@ -120,11 +120,7 @@ function Ability(props) {
         {prependSignChar(calculateAbilityMod(props.ability.score))}
       </td>
       <td className="check">
-        <input
-          type="checkbox"
-          checked={props.ability.save && "checked"}
-          readOnly={true}
-        />
+        <StaticCheck checked={props.ability.save} />
       </td>
     </tr>
   );
@@ -141,97 +137,11 @@ function Skills(props) {
             <th>Ability</th>
             <th>Mod</th>
             <th>Prof</th>
+            <th>Adv</th>
           </tr>
-          <Skill
-            name="Acrobatics"
-            ability={props.abilities.dex}
-            prof={props.skills.acrobatics}
-          />
-          <Skill
-            name="Animal Handling"
-            ability={props.abilities.wis}
-            prof={props.skills.animalhandling}
-          />
-          <Skill
-            name="Arcana"
-            ability={props.abilities.int}
-            prof={props.skills.arcana}
-          />
-          <Skill
-            name="Athletics"
-            ability={props.abilities.str}
-            prof={props.skills.athletics}
-          />
-          <Skill
-            name="Deception"
-            ability={props.abilities.cha}
-            prof={props.skills.deception}
-          />
-          <Skill
-            name="History"
-            ability={props.abilities.int}
-            prof={props.skills.history}
-          />
-          <Skill
-            name="Insight"
-            ability={props.abilities.wis}
-            prof={props.skills.insight}
-          />
-          <Skill
-            name="Intimidation"
-            ability={props.abilities.cha}
-            prof={props.skills.intimidation}
-          />
-          <Skill
-            name="Investigation"
-            ability={props.abilities.int}
-            prof={props.skills.investigation}
-          />
-          <Skill
-            name="Medicine"
-            ability={props.abilities.wis}
-            prof={props.skills.medicine}
-          />
-          <Skill
-            name="Nature"
-            ability={props.abilities.int}
-            prof={props.skills.nature}
-          />
-          <Skill
-            name="Perception"
-            ability={props.abilities.wis}
-            prof={props.skills.perception}
-          />
-          <Skill
-            name="Performance"
-            ability={props.abilities.cha}
-            prof={props.skills.performance}
-          />
-          <Skill
-            name="Persuasion"
-            ability={props.abilities.cha}
-            prof={props.skills.persuasion}
-          />
-          <Skill
-            name="Religion"
-            ability={props.abilities.int}
-            prof={props.skills.religion}
-          />
-          <Skill
-            name="Sleight of Hand"
-            ability={props.abilities.dex}
-            prof={props.skills.sleightofhand}
-          />
-          <Skill
-            name="Stealth"
-            ability={props.abilities.dex}
-            prof={props.skills.stealth}
-          />
-          <Skill
-            name="Survival"
-            ability={props.abilities.wis}
-            prof={props.skills.survival}
-          />
+          {Object.entries(props.skills).map(([key, skill]) => (
+            <Skill ability={props.abilities[skill.modKey]} skill={skill} />
+          ))}
         </tbody>
       </table>
     </div>
@@ -241,19 +151,28 @@ function Skills(props) {
 function Skill(props) {
   return (
     <tr>
-      <td className="str">{props.name}</td>
+      <td className="str">{props.skill.name}</td>
       <td className="str">{props.ability.abr}</td>
       <td className="num">
         {prependSignChar(calculateAbilityMod(props.ability.score))}
       </td>
       <td className="check">
-        <input
-          type="checkbox"
-          checked={props.prof && "checked"}
-          readOnly={true}
-        />
+        <StaticCheck checked={props.skill.prof} />
+      </td>
+      <td className="check">
+        <StaticCheck checked={props.skill.adv} />
       </td>
     </tr>
+  );
+}
+
+function StaticCheck(props) {
+  return (
+    <input
+      type="checkbox"
+      checked={props.checked && "checked"}
+      readOnly={true}
+    />
   );
 }
 
