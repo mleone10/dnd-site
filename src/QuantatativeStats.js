@@ -15,6 +15,7 @@ class QuantatativeStats extends React.Component {
         <Skills
           abilities={this.props.abilities}
           skills={this.props.skillProf}
+          profBonus={this.props.charInfo.profBonus}
         />
       </div>
     );
@@ -140,9 +141,10 @@ function Skills(props) {
             <th>Mod</th>
             <th>Prof</th>
             <th>Adv</th>
+            <th>Roll</th>
           </tr>
           {Object.entries(props.skills).map(([key, skill]) => (
-            <Skill ability={props.abilities[skill.modKey]} skill={skill} />
+            <Skill key={key} ability={props.abilities[skill.modKey]} skill={skill} profBonus={props.profBonus} />
           ))}
         </tbody>
       </table>
@@ -164,6 +166,9 @@ function Skill(props) {
       <td className="check">
         <StaticCheck checked={props.skill.adv} />
       </td>
+      <td className="check">
+        <RollButton initLabel="#" d={20} mod={calculateAbilityMod(props.ability.score) + (props.skill.prof ? props.profBonus : 0)} adv={props.skill.adv} />
+      </td>
     </tr>
   );
 }
@@ -176,6 +181,40 @@ function StaticCheck(props) {
       readOnly={true}
     />
   );
+}
+
+class RollButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      label: this.props.initLabel,
+      backgroundColor: "default"
+    };
+  }
+
+  handleClick = () => {
+    console.info(`Rolling ${this.props.d} sided die ${this.props.adv ? "with" : "without"} advantage, mod of ${this.props.mod}`)
+    let result = (this.props.adv ? Math.max(this.roll(), this.roll()) : this.roll()) + this.props.mod
+    console.info(`Final result of die roll: ${result}`)
+    this.setState(() => ({ label: result }));
+  };
+
+  roll = () => {
+    let r = Math.ceil(Math.random()*this.props.d)
+    console.info(`Rolled ${this.props.d} sided die, got ${r}`)
+    if (r === 20) {
+      this.setState(() => ({backgroundColor: "#ffe03a"}))
+    } else if (r === 1) {
+      this.setState(() => ({backgroundColor: "#ff3a3a"}))
+    } else {
+      this.setState(() => ({backgroundColor: "unset"}))
+    }
+    return r
+  }
+
+  render() {
+    return <button onClick={this.handleClick} style={{backgroundColor: this.state.backgroundColor}}>{this.state.label}</button>;
+  }
 }
 
 function calculateAbilityMod(score) {
