@@ -49,28 +49,28 @@ const CHAR_INFO = {
   background: "Sage (Researcher)",
   profBonus: 3,
   hpMax: 45,
-  hpCur: 45
+  hpCur: 45,
 };
 const SKILL_PROF = {
-  "acrobatics": false,
-  "animalhandling": false,
-  "arcana": true,
-  "athletics": false,
-  "deception": true,
-  "history": true,
-  "insight": false,
-  "intimidation": true,
-  "investigation": false,
-  "medicine": false,
-  "nature": false,
-  "perception": true,
-  "performance": false,
-  "persuasion": false,
-  "religion": false,
-  "sleightofhand": false,
-  "stealth": false,
-  "survival": false,
-}
+  acrobatics: false,
+  animalhandling: false,
+  arcana: true,
+  athletics: false,
+  deception: true,
+  history: true,
+  insight: false,
+  intimidation: true,
+  investigation: false,
+  medicine: false,
+  nature: false,
+  perception: true,
+  performance: false,
+  persuasion: false,
+  religion: false,
+  sleightofhand: false,
+  stealth: false,
+  survival: false,
+};
 
 class App extends React.Component {
   render() {
@@ -78,7 +78,11 @@ class App extends React.Component {
       <div className="App">
         <CharacterName name="Letheryl" />
         <FlavorText />
-        <QuantatativeStats abilities={ABILITIES} charInfo={CHAR_INFO} skillProf={SKILL_PROF} />
+        <QuantatativeStats
+          abilities={ABILITIES}
+          charInfo={CHAR_INFO}
+          skillProf={SKILL_PROF}
+        />
         <Footer />
       </div>
     );
