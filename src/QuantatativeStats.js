@@ -6,7 +6,7 @@ class QuantatativeStats extends React.Component {
       <div className="flex-container">
         <div className="flex-item" id="overview">
           <TopMatter content={getTopMatter()} />
-          <Stats stats={getStats()} />
+          <Stats abilities={getAbilities()}/>
           <Abilities abilities={getAbilities()} />
         </div>
         <Skills abilities={getAbilities()} />
@@ -45,9 +45,11 @@ function Stats(props) {
             <th>Stat</th>
             <th>Value</th>
           </tr>
-          {props.stats.map((stat) => (
-            <Stat name={stat.name} value={stat.value} key={stat.name}/>
-          ))}
+          <Stat name="Proficiency Bonus" value={prependSignChar(3)} />
+          <Stat name="Inspiration" value={0} />
+          <Stat name="Armor Class" value={11 + calculateAbilityMod(props.abilities.dex.score)} />
+          <Stat name="Initiative" value={prependSignChar(calculateAbilityMod(props.abilities.dex.score))} />
+          <Stat name="Hit Points" value="45/45" />
         </tbody>
       </table>
     </div>
@@ -92,7 +94,7 @@ function Ability(props) {
     <tr>
       <td className="str">{props.ability.name}</td>
       <td className="num">{props.ability.score}</td>
-      <td className="num">{calculateAbilityMod(props.ability.score)}</td>
+      <td className="num">{prependSignChar(calculateAbilityMod(props.ability.score))}</td>
       <td className="check">
         <input
           type="checkbox"
@@ -165,7 +167,7 @@ function Skill(props) {
     <tr>
       <td className="str">{props.name}</td>
       <td className="str">{props.ability.abr}</td>
-      <td className="num">{calculateAbilityMod(props.ability.score)}</td>
+      <td className="num">{prependSignChar(calculateAbilityMod(props.ability.score))}</td>
       <td className="check">
         <input
           type="checkbox"
@@ -185,31 +187,6 @@ function getTopMatter() {
     race: "Pallid Elf",
     background: "Sage (Researcher)",
   };
-}
-
-function getStats() {
-  return [
-    {
-      name: "Proficiency Bonus",
-      value: 3,
-    },
-    {
-      name: "Inspiration",
-      value: 0,
-    },
-    {
-      name: "Armor Class",
-      value: 13,
-    },
-    {
-      name: "Initiative",
-      value: 2,
-    },
-    {
-      name: "Hit Points",
-      value: "45/45",
-    },
-  ];
 }
 
 function getAbilities() {
@@ -254,8 +231,11 @@ function getAbilities() {
 }
 
 function calculateAbilityMod(score) {
-  let mod = Math.floor((score - 10) / 2);
-  return (mod < 0 ? "" : "+") + mod;
+  return Math.floor((score - 10) / 2);
+}
+
+function prependSignChar(n) {
+  return (n < 0 ? "" : "+") + n;
 }
 
 export default QuantatativeStats;

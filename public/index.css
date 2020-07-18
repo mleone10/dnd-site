@@ -23,6 +23,7 @@ body {
 table {
     margin: 0 auto;
     width: 90%;
+    line-height: normal;
 }
 
 table .str {
