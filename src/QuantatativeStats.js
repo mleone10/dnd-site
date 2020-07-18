@@ -188,7 +188,7 @@ class RollButton extends React.Component {
     super(props);
     this.state = {
       label: this.props.initLabel,
-      backgroundColor: "default"
+      style: {}
     };
   }
 
@@ -203,17 +203,17 @@ class RollButton extends React.Component {
     let r = Math.ceil(Math.random()*this.props.d)
     console.info(`Rolled ${this.props.d} sided die, got ${r}`)
     if (r === 20) {
-      this.setState(() => ({backgroundColor: "#ffe03a"}))
+      this.setState(() => ({style: {backgroundColor: "#ffe03a"}}))
     } else if (r === 1) {
-      this.setState(() => ({backgroundColor: "#ff3a3a"}))
+      this.setState(() => ({style: {backgroundColor: "#ff3a3a"}}))
     } else {
-      this.setState(() => ({backgroundColor: "unset"}))
+      this.setState(() => ({style: {}}))
     }
     return r
   }
 
   render() {
-    return <button onClick={this.handleClick} style={{backgroundColor: this.state.backgroundColor}}>{this.state.label}</button>;
+    return <button onClick={this.handleClick} style={this.state.style}>{this.state.label}</button>;
   }
 }
 
