@@ -10,7 +10,7 @@ body {
     width: 80%;
 }
 
-#flavortext p {
+.flavortext p {
     font-style: italic;
     text-align: center;
 }

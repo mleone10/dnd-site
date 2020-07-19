@@ -1,8 +1,10 @@
 import React from "react";
+
 import QuantatativeStats from "./QuantatativeStats";
+import ReactMarkdown from "react-markdown"
 
 const FLAVOR_TEXT =
-  "\"No, I can't say this is exactly my 'comfort zone' - we departed <b>that</b> happy Grove quite some time ago. But I suppose it's all fallen on me, hmm? 'An elf bleeds the same as anyone,' as they say, so I've got quite a weight on my shoulders...\"";
+  "\"No, I can't say this is exactly my 'comfort zone' - we departed **that** happy Grove quite some time ago. But I suppose it's all fallen on me, hmm? 'An elf bleeds the same as anyone,' as they say, so I've got quite a weight on my shoulders...\"";
 const ABILITIES = {
   str: {
     name: "Strength",
@@ -111,9 +113,7 @@ function CharacterName(props) {
 
 function FlavorText(props) {
   return (
-    <div id="flavortext">
-      <p dangerouslySetInnerHTML={{ __html: getFlavorText() }} />
-    </div>
+    <ReactMarkdown source={FLAVOR_TEXT} className="flavortext" />
   );
 }
 
