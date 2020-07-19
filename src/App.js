@@ -95,7 +95,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <CharacterName name="Letheryl" />
-        <FlavorText />
+        <FlavorText text={FLAVOR_TEXT}/>
         <QuantatativeStats
           abilities={ABILITIES}
           charInfo={CHAR_INFO}
@@ -113,16 +113,12 @@ function CharacterName(props) {
 
 function FlavorText(props) {
   return (
-    <ReactMarkdown source={FLAVOR_TEXT} className="flavortext" />
+    <ReactMarkdown source={props.text} className="flavortext" />
   );
 }
 
 function Footer(props) {
   return <footer>Copyright &copy; 2020 Mario Leone</footer>;
-}
-
-function getFlavorText() {
-  return FLAVOR_TEXT;
 }
 
 export default App;
