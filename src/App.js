@@ -1,6 +1,7 @@
 import React from "react";
 
 import QuantatativeStats from "./QuantatativeStats";
+import Spells from "./Spells";
 import ReactMarkdown from "react-markdown"
 
 const FLAVOR_TEXT =
@@ -45,13 +46,13 @@ const ABILITIES = {
 };
 const CHAR_INFO = {
   class: "Warlock",
-  level: 6,
+  level: 7,
   gender: "Male",
   race: "Pallid Elf",
   background: "Sage (Researcher)",
   profBonus: 3,
-  hpMax: 45,
-  hpCur: 45,
+  hpMax: 52,
+  hpCur: 52,
   baseAC: 11,
 };
 const SKILLS = {
@@ -101,6 +102,7 @@ class App extends React.Component {
           charInfo={CHAR_INFO}
           skillProf={SKILLS}
         />
+        <Spells />
         <Footer />
       </div>
     );

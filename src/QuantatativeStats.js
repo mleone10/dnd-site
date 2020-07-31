@@ -188,6 +188,7 @@ class RollButton extends React.Component {
     super(props);
     this.state = {
       label: this.props.initLabel,
+      // TODO: Figure out styling for button; clicked/unclicked classes?
       style: {}
     };
   }
