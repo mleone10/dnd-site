@@ -2,7 +2,7 @@
 > Dungeons and Dragons character management application
 
 This unnamed project is a webapp which aims to provide D&D character management tools.  Prospective features include:
-* Basic character information
+* Basic character information persistence
     * Name
     * Race
     * Class
@@ -24,7 +24,7 @@ This site is hosted as a static GitHub page.  A custom domain name is configured
 
 ## To Do
 * Tech
-    * Design/build basic UI
+    * ~~Design/build basic UI~~
     * Integrate with Cognito/Google/Facebook
     * Create a simple character persistance API
     * Implement bundling/minification with Gulp and Webpack
