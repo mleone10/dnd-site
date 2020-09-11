@@ -40,19 +40,19 @@ const ABILITIES = {
   cha: {
     name: "Charisma",
     abr: "Cha",
-    score: 18,
+    score: 20,
     save: true,
   },
 };
 const CHAR_INFO = {
   class: "Warlock",
-  level: 7,
+  level: 8,
   gender: "Male",
   race: "Pallid Elf",
   background: "Sage (Researcher)",
   profBonus: 3,
-  hpMax: 52,
-  hpCur: 52,
+  hpMax: 59,
+  hpCur: 59,
   baseAC: 11,
 };
 const SKILLS = {
