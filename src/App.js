@@ -54,6 +54,7 @@ const CHAR_INFO = {
   hpMax: 66,
   hpCur: 66,
   baseAC: 11,
+  spellSlots: 3,
 };
 const SKILLS = {
   acrobatics: { name: "Acrobatics", prof: false, adv: false, modKey: "dex" },
@@ -102,7 +103,7 @@ class App extends React.Component {
           charInfo={CHAR_INFO}
           skillProf={SKILLS}
         />
-        <Spells />
+        <Spells charInfo={CHAR_INFO} />
         <Footer />
       </div>
     );

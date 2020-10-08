@@ -1,7 +1,7 @@
 import React from "react";
 
 const SPELLS = {
-  cantrips: [
+  0: [
     {
       name: "Eldritch Blast",
     },
@@ -61,7 +61,30 @@ const SPELLS = {
 function Spells(props) {
   // TODO: Display list of spells
   // TODO: Populate list of spells range, descriptions, etc from an API
-  return <div></div>;
+  const spellsList = Object.entries(SPELLS).map(([level, levelSpells]) => {
+    return (
+      <li>
+        Level {level}
+        <ul>
+          {levelSpells.map((spell) => {
+            return (
+              <li>
+                {spell.ritual && <i>(Ritual)</i>} {spell.name}{" "}
+                {spell.source !== undefined && <i>({spell.source})</i>}
+              </li>
+            );
+          })}
+        </ul>
+      </li>
+    );
+  });
+  return (
+    <div id="spells">
+      <h3>Spells</h3>
+      <i>{props.charInfo.spellSlots} spell slots, regained on short rest</i>
+      <ul>{spellsList}</ul>
+    </div>
+  );
 }
 
 export default Spells;
