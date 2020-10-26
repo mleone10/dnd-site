@@ -6,6 +6,9 @@ const SPELLS = {
       name: "Eldritch Blast",
     },
     {
+      name: "Guidance",
+    },
+    {
       name: "Mage Hand",
     },
     {
@@ -16,7 +19,7 @@ const SPELLS = {
       source: "Blessing of the Moon Weaver",
     },
     {
-      name: "Guidance",
+      name: "Message",
       source: "Pact of the Tome",
     },
     {
