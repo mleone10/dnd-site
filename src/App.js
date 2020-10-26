@@ -46,7 +46,7 @@ const ABILITIES = {
 };
 const CHAR_INFO = {
   class: "Warlock",
-  level: 9,
+  level: 10,
   gender: "Male",
   race: "Pallid Elf",
   background: "Sage (Researcher)",
