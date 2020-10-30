@@ -62,12 +62,11 @@ const SPELLS = {
 };
 
 function Spells(props) {
-  // TODO: Display list of spells
   // TODO: Populate list of spells range, descriptions, etc from an API
   const spellsList = Object.entries(SPELLS).map(([level, levelSpells]) => {
     return (
       <li>
-        Level {level}
+        <b>Level {level}</b>
         <ul>
           {levelSpells.map((spell) => {
             return (
