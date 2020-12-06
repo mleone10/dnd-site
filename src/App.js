@@ -8,12 +8,22 @@ import Personality from "./Personality";
 import Invocations from "./Invocations";
 
 class App extends React.Component {
+  state = {
+    charInfo: {},
+  };
+
+  componentDidMount() {
+    // TODO: Retrieve character info from API
+    fetch(process.env.PUBLIC_URL + "/data/charInfo.json")
+      .then((res) => res.json())
+      .then((charInfo) => this.setState({ charInfo: charInfo }));
+  }
   render() {
     return (
       <div className="App">
-        <CharacterName name="Letheryl" />
+        <CharacterName name={this.state.charInfo.name} />
         <FlavorText />
-        <QuantatativeStats />
+        <QuantatativeStats charInfo={this.state.charInfo} />
         <Features />
         <Personality />
         <Invocations />

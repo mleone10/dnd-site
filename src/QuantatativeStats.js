@@ -9,9 +9,6 @@ class QuantatativeStats extends React.Component {
 
   componentDidMount() {
     // TODO: Retrieve data from API
-    fetch(process.env.PUBLIC_URL + "/data/charInfo.json")
-      .then((res) => res.json())
-      .then((charInfo) => this.setState({ charInfo: charInfo }));
     fetch(process.env.PUBLIC_URL + "/data/abilities.json")
       .then((res) => res.json())
       .then((abilities) => this.setState({ abilities: abilities }));
@@ -22,8 +19,8 @@ class QuantatativeStats extends React.Component {
 
   render() {
     if (
-      !this.state.charInfo ||
-      Object.keys(this.state.charInfo).length === 0 ||
+      !this.props.charInfo ||
+      Object.keys(this.props.charInfo).length === 0 ||
       !this.state.abilities ||
       Object.keys(this.state.abilities).length === 0 ||
       !this.state.skills ||
@@ -33,17 +30,17 @@ class QuantatativeStats extends React.Component {
     return (
       <div className="flex-container">
         <div className="flex-item" id="overview">
-          <TopMatter charInfo={this.state.charInfo} />
+          <TopMatter charInfo={this.props.charInfo} />
           <Stats
             abilities={this.state.abilities}
-            charInfo={this.state.charInfo}
+            charInfo={this.props.charInfo}
           />
           <Abilities abilities={this.state.abilities} />
         </div>
         <Skills
           abilities={this.state.abilities}
           skills={this.state.skills}
-          charInfo={this.state.charInfo}
+          charInfo={this.props.charInfo}
         />
       </div>
     );
