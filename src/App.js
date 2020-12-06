@@ -6,6 +6,7 @@ import Spells from "./Spells";
 import Features from "./Features";
 import Personality from "./Personality";
 import Invocations from "./Invocations";
+import Equipment from "./Equipment";
 
 class App extends React.Component {
   state = {
@@ -32,6 +33,7 @@ class App extends React.Component {
         />
         <Invocations />
         <Spells />
+        <Equipment />
         <Footer />
       </div>
     );
