@@ -1,0 +1,12 @@
+{
+    "class": "Warlock",
+    "level": 10,
+    "gender": "Male",
+    "race": "Pallid Elf",
+    "background": "Sage (Researcher)",
+    "profBonus": 4,
+    "hpMax": 66,
+    "hpCur": 66,
+    "baseAC": 11,
+    "spellSlots": 3
+}
