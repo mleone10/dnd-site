@@ -34,7 +34,7 @@ function SpellsList(props) {
             <b>Level {level}</b>
             <ul>
               {levelSpells.map((spell) => {
-                return <Spell spell={spell} />;
+                return <Spell spell={spell} key={spell.name}/>;
               })}
             </ul>
           </li>
@@ -46,7 +46,7 @@ function SpellsList(props) {
 
 function Spell(props) {
   return (
-    <li key={props.spell.name}>
+    <li>
       {props.spell.ritual && <i>(Ritual)</i>} {props.spell.name}{" "}
       {props.spell.source !== undefined && <i>({props.spell.source})</i>}
     </li>
