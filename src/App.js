@@ -5,6 +5,7 @@ import QuantatativeStats from "./QuantatativeStats";
 import Spells from "./Spells";
 import Features from "./Features";
 import Personality from "./Personality";
+import Invocations from "./Invocations";
 
 class App extends React.Component {
   render() {
@@ -15,6 +16,7 @@ class App extends React.Component {
         <QuantatativeStats />
         <Features />
         <Personality />
+        <Invocations />
         <Spells />
         <Footer />
       </div>

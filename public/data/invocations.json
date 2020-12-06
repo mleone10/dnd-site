@@ -1,0 +1,24 @@
+{
+    "invocations": [
+        {
+            "name": "Agonizing Blast",
+            "desc": "I add my charisma modifier to Eldritch Blast damage."
+        },
+        {
+            "name": "Grasp of Hadar",
+            "desc": "Once per turn when I hit a creature with Eldritch Blast, I can move that creature 10 feet straight toward me."
+        },
+        {
+            "name": "Repelling Blast",
+            "desc": "When I hit a creature with Eldritch Blast, I can push them 10 feet away from me."
+        },
+        {
+            "name": "Mask of Many Faces",
+            "desc": "I can cast 'disguise self' at will without expending a spell slot."
+        },
+        {
+            "name": "Book of Ancient Secrets",
+            "desc": "I can inscribe rituals in my Book of Shadows. Rituals can be from any class's spell list, can only be cast as rituals, and must be of a level equal to or less than half of my warlock level (rounded up)."
+        }
+    ]
+}
