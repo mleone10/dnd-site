@@ -3,6 +3,7 @@ import React from "react";
 import FlavorText from "./FlavorText";
 import QuantatativeStats from "./QuantatativeStats";
 import Spells from "./Spells";
+import Features from "./Features";
 
 class App extends React.Component {
   render() {
@@ -11,6 +12,7 @@ class App extends React.Component {
         <CharacterName name="Letheryl" />
         <FlavorText />
         <QuantatativeStats />
+        <Features />
         <Spells />
         <Footer />
       </div>

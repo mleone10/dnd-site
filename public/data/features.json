@@ -1,0 +1,44 @@
+{
+    "features": [
+        {
+            "name": "Trance",
+            "source": "Elf",
+            "desc": "Rather than taking long rests, I go into a meditative trance for four hours per day."
+        },
+        {
+            "name": "Darkvision",
+            "source": "Elf",
+            "desc": "I can see in dim light within 60 feed as if it were bright light, and in darkness as if it were dim light."
+        },
+        {
+            "name": "Fey Ancestry",
+            "source": "Elf",
+            "desc": "I have advantage on saves against being charmed, and I cannot be put to sleep using magic."
+        },
+        {
+            "name": "Incisive Sense",
+            "source": "Pallid Elf",
+            "desc": "I have advantage on Insight and Investigation ability checks."
+        },
+        {
+            "name": "Researcher",
+            "source": "Sage",
+            "desc": "When I attempt to learn or recall a piece of lore, if I don't know it, I often know where and from whom I can obtain it. Usually this is a library, university, or other learned individual. The DM might rule that it is inaccessible or does not exist."
+        },
+        {
+            "name": "Fey Presence",
+            "source": "Archfey Patron",
+            "desc": "As an action, cause all creatures in a 10' cube in front of me to make a Wisdom save against my warlock spell save DC. On failure, they are charmed or frightened until the end of my next turn."
+        },
+        {
+            "name": "Misty Escape",
+            "source": "Archfey Patron",
+            "desc": " When I take damage, use my reaction to turn invisible and teleport up to 60' to an unoccupied space I can see. Remain invisible until the start of my next turn or until I attack/cast a spell. Once per short/long rest."
+        },
+        {
+            "name": "Beguiling Defenses",
+            "source": "Archfey Patron",
+            "desc": "I am immune to being charmed. When another creature tries to charm me, I can use my reaction to make them make a wisdom saving throw against my spell save DC. If they fail, they are charmed by me for one minute or until they take damage."
+        }
+    ]
+}
