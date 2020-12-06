@@ -1,21 +1,49 @@
 import React from "react";
 
 class QuantatativeStats extends React.Component {
+  state = {
+    charInfo: {},
+    abilities: {},
+    skills: {},
+  };
+
+  componentDidMount() {
+    // TODO: Retrieve data from API
+    fetch(process.env.PUBLIC_URL + "/data/charInfo.json")
+      .then((res) => res.json())
+      .then((charInfo) => this.setState({ charInfo: charInfo }));
+    fetch(process.env.PUBLIC_URL + "/data/abilities.json")
+      .then((res) => res.json())
+      .then((abilities) => this.setState({ abilities: abilities }));
+    fetch(process.env.PUBLIC_URL + "/data/skills.json")
+      .then((res) => res.json())
+      .then((skills) => this.setState({ skills: skills }));
+  }
+
   render() {
+    if (
+      !this.state.charInfo ||
+      Object.keys(this.state.charInfo).length === 0 ||
+      !this.state.abilities ||
+      Object.keys(this.state.abilities).length === 0 ||
+      !this.state.skills ||
+      Object.keys(this.state.skills).length === 0
+    )
+      return <div></div>;
     return (
       <div className="flex-container">
         <div className="flex-item" id="overview">
-          <TopMatter charInfo={this.props.charInfo} />
+          <TopMatter charInfo={this.state.charInfo} />
           <Stats
-            abilities={this.props.abilities}
-            charInfo={this.props.charInfo}
+            abilities={this.state.abilities}
+            charInfo={this.state.charInfo}
           />
-          <Abilities abilities={this.props.abilities} />
+          <Abilities abilities={this.state.abilities} />
         </div>
         <Skills
-          abilities={this.props.abilities}
-          skills={this.props.skillProf}
-          profBonus={this.props.charInfo.profBonus}
+          abilities={this.state.abilities}
+          skills={this.state.skills}
+          charInfo={this.state.charInfo}
         />
       </div>
     );
@@ -144,7 +172,12 @@ function Skills(props) {
             <th>Roll</th>
           </tr>
           {Object.entries(props.skills).map(([key, skill]) => (
-            <Skill key={key} ability={props.abilities[skill.modKey]} skill={skill} profBonus={props.profBonus} />
+            <Skill
+              key={key}
+              ability={props.abilities[skill.modKey]}
+              skill={skill}
+              profBonus={props.profBonus}
+            />
           ))}
         </tbody>
       </table>
@@ -167,7 +200,15 @@ function Skill(props) {
         <StaticCheck checked={props.skill.adv} />
       </td>
       <td className="check">
-        <RollButton initLabel="#" d={20} mod={calculateAbilityMod(props.ability.score) + (props.skill.prof ? props.profBonus : 0)} adv={props.skill.adv} />
+        <RollButton
+          initLabel="#"
+          d={20}
+          mod={
+            calculateAbilityMod(props.ability.score) +
+            (props.skill.prof ? props.profBonus : 0)
+          }
+          adv={props.skill.adv}
+        />
       </td>
     </tr>
   );
@@ -189,32 +230,42 @@ class RollButton extends React.Component {
     this.state = {
       label: this.props.initLabel,
       // TODO: Figure out styling for button; clicked/unclicked classes?
-      style: {}
+      style: {},
     };
   }
 
   handleClick = () => {
-    console.info(`Rolling ${this.props.d} sided die ${this.props.adv ? "with" : "without"} advantage, mod of ${this.props.mod}`)
-    let result = (this.props.adv ? Math.max(this.roll(), this.roll()) : this.roll()) + this.props.mod
-    console.info(`Final result of die roll: ${result}`)
+    console.info(
+      `Rolling ${this.props.d} sided die ${
+        this.props.adv ? "with" : "without"
+      } advantage, mod of ${this.props.mod}`
+    );
+    let result =
+      (this.props.adv ? Math.max(this.roll(), this.roll()) : this.roll()) +
+      this.props.mod;
+    console.info(`Final result of die roll: ${result}`);
     this.setState(() => ({ label: result }));
   };
 
   roll = () => {
-    let r = Math.ceil(Math.random()*this.props.d)
-    console.info(`Rolled ${this.props.d} sided die, got ${r}`)
+    let r = Math.ceil(Math.random() * this.props.d);
+    console.info(`Rolled ${this.props.d} sided die, got ${r}`);
     if (r === 20) {
-      this.setState(() => ({style: {backgroundColor: "#ffe03a"}}))
+      this.setState(() => ({ style: { backgroundColor: "#ffe03a" } }));
     } else if (r === 1) {
-      this.setState(() => ({style: {backgroundColor: "#ff3a3a"}}))
+      this.setState(() => ({ style: { backgroundColor: "#ff3a3a" } }));
     } else {
-      this.setState(() => ({style: {}}))
+      this.setState(() => ({ style: {} }));
     }
-    return r
-  }
+    return r;
+  };
 
   render() {
-    return <button onClick={this.handleClick} style={this.state.style}>{this.state.label}</button>;
+    return (
+      <button onClick={this.handleClick} style={this.state.style}>
+        {this.state.label}
+      </button>
+    );
   }
 }
 

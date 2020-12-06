@@ -2,7 +2,6 @@ import React from "react";
 
 class Spells extends React.Component {
   // TODO: Populate list of spells range, descriptions, etc from an API
-
   state = {
     spells: {},
   };
@@ -11,7 +10,7 @@ class Spells extends React.Component {
     // TODO: Retrieve spells from API
     fetch(process.env.PUBLIC_URL + "/data/spells.json")
       .then((res) => res.json())
-      .then((spells) => this.setState({ spells: spells }));
+      .then((data) => this.setState({ spells: data.spells, spellSlots: data.spellSlots }));
   }
 
   render() {
@@ -19,7 +18,7 @@ class Spells extends React.Component {
       <div id="spells">
         <h3>Spells</h3>
         <i>
-          {this.props.charInfo.spellSlots} spell slots, regained on short rest
+          {this.state.spellSlots} spell slots, regained on short rest
         </i>
         <SpellsList spells={this.state.spells} />
       </div>

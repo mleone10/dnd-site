@@ -4,104 +4,14 @@ import FlavorText from "./FlavorText";
 import QuantatativeStats from "./QuantatativeStats";
 import Spells from "./Spells";
 
-const ABILITIES = {
-  str: {
-    name: "Strength",
-    abr: "Str",
-    score: 9,
-    save: false,
-  },
-  con: {
-    name: "Constitution",
-    abr: "Con",
-    score: 14,
-    save: false,
-  },
-  dex: {
-    name: "Dexterity",
-    abr: "Dex",
-    score: 14,
-    save: false,
-  },
-  wis: {
-    name: "Wisdom",
-    abr: "Wis",
-    score: 13,
-    save: true,
-  },
-  int: {
-    name: "Intelligence",
-    abr: "Int",
-    score: 10,
-    save: false,
-  },
-  cha: {
-    name: "Charisma",
-    abr: "Cha",
-    score: 20,
-    save: true,
-  },
-};
-const CHAR_INFO = {
-  class: "Warlock",
-  level: 10,
-  gender: "Male",
-  race: "Pallid Elf",
-  background: "Sage (Researcher)",
-  profBonus: 4,
-  hpMax: 66,
-  hpCur: 66,
-  baseAC: 11,
-  spellSlots: 3,
-};
-const SKILLS = {
-  acrobatics: { name: "Acrobatics", prof: false, adv: false, modKey: "dex" },
-  animalhandling: {
-    name: "Animal Handling",
-    prof: false,
-    adv: false,
-    modKey: "wis",
-  },
-  arcana: { name: "Arcana", prof: true, adv: false, modKey: "int" },
-  athletics: { name: "Athletics", prof: false, adv: false, modKey: "str" },
-  deception: { name: "Deception", prof: true, adv: false, modKey: "cha" },
-  history: { name: "History", prof: true, adv: false, modKey: "int" },
-  insight: { name: "Insight", prof: false, adv: true, modKey: "wis" },
-  intimidation: { name: "Intimidation", prof: true, adv: false, modKey: "cha" },
-  investigation: {
-    name: "Investigation",
-    prof: false,
-    adv: true,
-    modKey: "int",
-  },
-  medicine: { name: "Medicine", prof: false, adv: false, modKey: "wis" },
-  nature: { name: "Nature", prof: false, adv: false, modKey: "int" },
-  perception: { name: "Perception", prof: true, adv: false, modKey: "wis" },
-  performance: { name: "Performance", prof: false, adv: false, modKey: "cha" },
-  persuasion: { name: "Persuasion", prof: false, adv: false, modKey: "cha" },
-  religion: { name: "Religion", prof: false, adv: false, modKey: "int" },
-  sleightofhand: {
-    name: "Sleight of Hand",
-    prof: false,
-    adv: false,
-    modKey: "dex",
-  },
-  stealth: { name: "Stealth", prof: false, adv: false, modKey: "dex" },
-  survival: { name: "Survival", prof: false, adv: false, modKey: "wis" },
-};
-
 class App extends React.Component {
   render() {
     return (
       <div className="App">
         <CharacterName name="Letheryl" />
         <FlavorText />
-        <QuantatativeStats
-          abilities={ABILITIES}
-          charInfo={CHAR_INFO}
-          skillProf={SKILLS}
-        />
-        <Spells charInfo={CHAR_INFO} />
+        <QuantatativeStats />
+        <Spells />
         <Footer />
       </div>
     );

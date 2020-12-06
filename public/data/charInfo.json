@@ -7,6 +7,5 @@
     "profBonus": 4,
     "hpMax": 66,
     "hpCur": 66,
-    "baseAC": 11,
-    "spellSlots": 3
+    "baseAC": 11
 }
