@@ -1,91 +1,55 @@
 import React from "react";
 
-const SPELLS = {
-  0: [
-    {
-      name: "Eldritch Blast",
-    },
-    {
-      name: "Friends",
-    },
-    {
-      name: "Mage Hand",
-    },
-    {
-      name: "Prestidigitation",
-    },
-    {
-      name: "Light",
-      source: "Blessing of the Moon Weaver",
-    },
-    {
-      name: "Guidance",
-      source: "Pact of the Tome",
-    },
-    {
-      name: "Message",
-      source: "Pact of the Tome",
-    },
-    {
-      name: "Minor Illusion",
-      source: "Pact of the Tome",
-    },
-  ],
-  1: [
-    { name: "Armor of Agathys" },
-    { name: "Hellish Rebuke" },
-    { name: "Hex" },
-    {
-      name: "Sleep",
-      source: "Blessing of the Moon Weaver; once per long rest",
-    },
-    { name: "Detect Magic", ritual: true },
-    { name: "Find Familiar", ritual: true },
-  ],
-  2: [
-    { name: "Darkness" },
-    { name: "Hold Person" },
-    { name: "Misty Step" },
-    {
-      name: "Invisibility",
-      source: "Blessing of the Moon Weaver; once per long rest",
-    },
-  ],
-  3: [
-    {
-      name: "Counterspell",
-    },
-    { name: "Dispel Magic" },
-    { name: "Fly" },
-  ],
-  4: [{ name: "Dimension Door" }],
-};
+class Spells extends React.Component {
+  state = {
+    spells: {},
+  };
 
-function Spells(props) {
   // TODO: Populate list of spells range, descriptions, etc from an API
-  const spellsList = Object.entries(SPELLS).map(([level, levelSpells]) => {
+  componentDidMount() {
+    fetch(process.env.PUBLIC_URL + "/data/spells.json")
+      .then((res) => res.json())
+      .then((spells) => this.setState({ spells: spells }));
+  }
+
+  render() {
     return (
-      <li>
-        <b>Level {level}</b>
-        <ul>
-          {levelSpells.map((spell) => {
-            return (
-              <li>
-                {spell.ritual && <i>(Ritual)</i>} {spell.name}{" "}
-                {spell.source !== undefined && <i>({spell.source})</i>}
-              </li>
-            );
-          })}
-        </ul>
-      </li>
+      <div id="spells">
+        <h3>Spells</h3>
+        <i>
+          {this.props.charInfo.spellSlots} spell slots, regained on short rest
+        </i>
+        <SpellsList spells={this.state.spells} />
+      </div>
     );
-  });
+  }
+}
+
+function SpellsList(props) {
   return (
-    <div id="spells">
-      <h3>Spells</h3>
-      <i>{props.charInfo.spellSlots} spell slots, regained on short rest</i>
-      <ul>{spellsList}</ul>
-    </div>
+    <ul>
+      {Object.entries(props.spells).map(([level, levelSpells]) => {
+        return (
+          <li key={level}>
+            <b>Level {level}</b>
+            <ul>
+              {levelSpells.map((spell) => {
+                return <Spell spell={spell} />;
+              })}
+            </ul>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
+function Spell(props) {
+  return (
+    <li key={props.spell.name}>
+      {props.spell.ritual && <i>(Ritual)</i>} {props.spell.name}{" "}
+      {props.spell.source !== undefined && <i>({props.spell.source})</i>}
+    </li>
   );
 }
 
