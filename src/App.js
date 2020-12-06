@@ -1,11 +1,9 @@
 import React from "react";
 
+import FlavorText from "./FlavorText";
 import QuantatativeStats from "./QuantatativeStats";
 import Spells from "./Spells";
-import ReactMarkdown from "react-markdown";
 
-const FLAVOR_TEXT =
-  "\"No, I can't say this is exactly my 'comfort zone' - we departed **that** happy Grove quite some time ago. But I suppose it's all fallen on me, hmm? 'An elf bleeds the same as anyone,' as they say, so I've got quite a weight on my shoulders...\"";
 const ABILITIES = {
   str: {
     name: "Strength",
@@ -97,7 +95,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <CharacterName name="Letheryl" />
-        <FlavorText text={FLAVOR_TEXT} />
+        <FlavorText />
         <QuantatativeStats
           abilities={ABILITIES}
           charInfo={CHAR_INFO}
@@ -112,10 +110,6 @@ class App extends React.Component {
 
 function CharacterName(props) {
   return <h1>{props.name}</h1>;
-}
-
-function FlavorText(props) {
-  return <ReactMarkdown source={props.text} className="flavortext" />;
 }
 
 function Footer(props) {
