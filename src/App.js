@@ -4,6 +4,7 @@ import FlavorText from "./FlavorText";
 import QuantatativeStats from "./QuantatativeStats";
 import Spells from "./Spells";
 import Features from "./Features";
+import Personality from "./Personality";
 
 class App extends React.Component {
   render() {
@@ -13,6 +14,7 @@ class App extends React.Component {
         <FlavorText />
         <QuantatativeStats />
         <Features />
+        <Personality />
         <Spells />
         <Footer />
       </div>
