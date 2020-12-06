@@ -26,6 +26,10 @@ class App extends React.Component {
         <QuantatativeStats charInfo={this.state.charInfo} />
         <Features />
         <Personality />
+        <LangsAndProfs
+          langs={this.state.charInfo.languages}
+          profs={this.state.charInfo.proficiencies}
+        />
         <Invocations />
         <Spells />
         <Footer />
@@ -36,6 +40,34 @@ class App extends React.Component {
 
 function CharacterName(props) {
   return <h1>{props.name}</h1>;
+}
+
+function LangsAndProfs(props) {
+  if (
+    !props.langs ||
+    props.langs.length === 0 ||
+    !props.profs ||
+    props.profs.length === 0
+  )
+    return <div></div>;
+  return (
+    <div id="profiencies">
+      <h3>Languages and Proficiencies</h3>
+      <ul>
+        <li key="languages">
+          <b>Languages</b>
+          <ul>
+            {props.langs.map((lang) => (
+              <li key={lang}>{lang}</li>
+            ))}
+          </ul>
+        </li>
+        {props.profs.map((prof) => (
+          <li key={prof}>{prof}</li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
 function Footer(props) {

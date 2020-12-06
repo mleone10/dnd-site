@@ -8,5 +8,15 @@
     "profBonus": 4,
     "hpMax": 73,
     "hpCur": 73,
-    "baseAC": 11
+    "baseAC": 11,
+    "languages": [
+        "Common",
+        "Elvish",
+        "Marquesian",
+        "Goblin"
+    ],
+    "proficiencies": [
+        "Light Armor",
+        "Simple Weapons"
+    ]
 }
