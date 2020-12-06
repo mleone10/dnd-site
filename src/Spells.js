@@ -1,12 +1,14 @@
 import React from "react";
 
 class Spells extends React.Component {
+  // TODO: Populate list of spells range, descriptions, etc from an API
+
   state = {
     spells: {},
   };
 
-  // TODO: Populate list of spells range, descriptions, etc from an API
   componentDidMount() {
+    // TODO: Retrieve spells from API
     fetch(process.env.PUBLIC_URL + "/data/spells.json")
       .then((res) => res.json())
       .then((spells) => this.setState({ spells: spells }));
@@ -34,7 +36,7 @@ function SpellsList(props) {
             <b>Level {level}</b>
             <ul>
               {levelSpells.map((spell) => {
-                return <Spell spell={spell} key={spell.name}/>;
+                return <Spell spell={spell} key={spell.name} />;
               })}
             </ul>
           </li>
