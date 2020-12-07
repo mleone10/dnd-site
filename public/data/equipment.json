@@ -1,1 +1,67 @@
-{}
+{
+    "uncategorized": [
+        "Staff (arcane focus)",
+        "Rod of the Pact Keeper +1",
+        "Handy Haversack"
+    ],
+    "categories": [
+        {
+            "name": "Adventuring Gear",
+            "items": [
+                "Crowbar",
+                "Hammer",
+                "Piton (10)",
+                "Torches (10)",
+                "Tinderbox",
+                "Rations (10 days)",
+                "Waterskin",
+                "Hempen rope (50')",
+                "Bottle of black ink",
+                "Quill",
+                "Small knife",
+                "Common clothes",
+                "Tiny flask of whiskey"
+            ]
+        },
+        {
+            "name": "Coin",
+            "items": [
+                "2470gp",
+                "375gp in Melora Lophson Smos credit"
+            ]
+        },
+        {
+            "name": "Consumables",
+            "items": [
+                "Scroll of blindness/deafness",
+                "Scroll of command",
+                "Scroll of dispel magic",
+                "Scroll of fortune's favor",
+                "Scroll of revivify",
+                "Scroll of speak with dead",
+                "Oil of slipperiness",
+                "Potion of fortune's favor",
+                "Potion of fluffy baby",
+                "Potion of healing"
+            ]
+        },
+        {
+            "name": "Treasure",
+            "items": [
+                "I'vranya's letter",
+                "Diamond (300g)",
+                "Sapphire battery to the derelic Moonweaver",
+                "Rune sequence for Cobalt Soul, Port Damali"
+            ]
+        },
+        {
+            "name": "Weapons and Armor",
+            "items": [
+                "Leather armor",
+                "Shortbow with 20 arrows",
+                "Daggers (2)",
+                "Handaxe"
+            ]
+        }
+    ]
+}
