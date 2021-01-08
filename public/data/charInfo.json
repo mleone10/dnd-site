@@ -1,13 +1,13 @@
 {
     "name": "Letheryl",
     "class": "Warlock",
-    "level": 10,
+    "level": 11,
     "gender": "Male",
     "race": "Pallid Elf",
     "background": "Sage (Researcher)",
     "profBonus": 4,
-    "hpMax": 73,
-    "hpCur": 73,
+    "hpMax": 80,
+    "hpCur": 80,
     "baseAC": 11,
     "languages": [
         "Common",

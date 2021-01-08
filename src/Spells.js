@@ -51,7 +51,9 @@ function SpellsList(props) {
 function Spell(props) {
   return (
     <li>
-      {props.spell.ritual && <i>(Ritual)</i>} {props.spell.name}{" "}
+      {props.spell.concentration && <i>(Con.) </i>}
+      {props.spell.arcanum && <i>(Arcanum) </i>}
+      {props.spell.ritual && <i>(Ritual) </i>} {props.spell.name}
       {props.spell.source !== undefined && <i>({props.spell.source})</i>}
     </li>
   );
