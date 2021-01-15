@@ -2,7 +2,8 @@
     "uncategorized": [
         "Staff (arcane focus)",
         "Rod of the Pact Keeper +1",
-        "Handy Haversack"
+        "Handy Haversack",
+        "Unidentified wand (fingers curling to a skull)"
     ],
     "categories": [
         {
@@ -26,7 +27,7 @@
         {
             "name": "Coin",
             "items": [
-                "2470gp",
+                "2750gp",
                 "375gp in Melora Lophson Smos credit"
             ]
         },
@@ -42,7 +43,8 @@
                 "Oil of slipperiness",
                 "Potion of fortune's favor",
                 "Potion of fluffy baby",
-                "Potion of healing"
+                "Potion of healing",
+                "Unidentified potion (clear, oily, viscous, metallic)"
             ]
         },
         {
