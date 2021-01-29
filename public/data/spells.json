@@ -6,7 +6,8 @@
         "name": "Eldritch Blast"
       },
       {
-        "name": "Friends"
+        "name": "Friends",
+        "concentration": true
       },
       {
         "name": "Mage Hand"
@@ -20,6 +21,7 @@
       },
       {
         "name": "Guidance",
+        "concentration": true,
         "source": "Pact of the Tome"
       },
       {
