@@ -96,6 +96,9 @@
       {
         "name": "Hold Monster",
         "concentration": true
+      },
+      {
+        "name": "Seeming"
       }
     ],
     "6": [
@@ -103,6 +106,12 @@
         "name": "Tasha's Otherworldly Guise",
         "arcanum": true,
         "concentration": true
+      }
+    ],
+    "7": [
+      {
+        "name": "Force Cage",
+        "arcanum": true
       }
     ]
   }
