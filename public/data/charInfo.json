@@ -6,8 +6,8 @@
     "race": "Pallid Elf",
     "background": "Sage (Researcher)",
     "profBonus": 5,
-    "hpMax": 87,
-    "hpCur": 87,
+    "hpMax": 94,
+    "hpCur": 94,
     "baseAC": 11,
     "languages": [
         "Common",
