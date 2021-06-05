@@ -39,6 +39,11 @@
             "name": "Beguiling Defenses",
             "source": "Archfey Patron",
             "desc": "I am immune to being charmed. When another creature tries to charm me, I can use my reaction to make them make a wisdom saving throw against my spell save DC. If they fail, they are charmed by me for one minute or until they take damage."
+        },
+        {
+            "name": "Dark Delerium",
+            "source": "Archfey Patron",
+            "desc": "Once per rest, a target creature I can see within 60' must make a Wisdom save against my spell save DC or be plunged into an illusory realm.  It is charmed or frightened for a minute, until concentration is broken, or it takes any damage.  The creature can see and hear only itself, me, and the illusion."
         }
     ]
 }
