@@ -55,6 +55,10 @@
       {
         "name": "Find Familiar",
         "ritual": true
+      },
+      {
+        "name": "Comprehend Languages",
+        "ritual": true
       }
     ],
     "2": [
