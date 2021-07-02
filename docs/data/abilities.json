@@ -1,0 +1,38 @@
+{
+    "str": {
+        "name": "Strength",
+        "abr": "Str",
+        "score": 9,
+        "save": false
+    },
+    "con": {
+        "name": "Constitution",
+        "abr": "Con",
+        "score": 14,
+        "save": false
+    },
+    "dex": {
+        "name": "Dexterity",
+        "abr": "Dex",
+        "score": 14,
+        "save": false
+    },
+    "wis": {
+        "name": "Wisdom",
+        "abr": "Wis",
+        "score": 13,
+        "save": true
+    },
+    "int": {
+        "name": "Intelligence",
+        "abr": "Int",
+        "score": 12,
+        "save": false
+    },
+    "cha": {
+        "name": "Charisma",
+        "abr": "Cha",
+        "score": 20,
+        "save": true
+    }
+}

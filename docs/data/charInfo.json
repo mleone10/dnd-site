@@ -1,0 +1,22 @@
+{
+    "name": "Letheryl",
+    "class": "Warlock",
+    "level": 14,
+    "gender": "Male",
+    "race": "Pallid Elf",
+    "background": "Sage (Researcher)",
+    "profBonus": 5,
+    "hpMax": 101,
+    "hpCur": 101,
+    "baseAC": 11,
+    "languages": [
+        "Common",
+        "Elvish",
+        "Marquesian",
+        "Goblin"
+    ],
+    "proficiencies": [
+        "Light Armor",
+        "Simple Weapons"
+    ]
+}
