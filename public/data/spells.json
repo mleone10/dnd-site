@@ -90,6 +90,10 @@
     "4": [
       {
         "name": "Dimension Door"
+      },
+      {
+        "name": "Greater Invisibility",
+        "concentration": true
       }
     ],
     "5": [
@@ -115,6 +119,12 @@
     "7": [
       {
         "name": "Force Cage",
+        "arcanum": true
+      }
+    ],
+    "8": [
+      {
+        "name": "Dominate Monster",
         "arcanum": true
       }
     ]

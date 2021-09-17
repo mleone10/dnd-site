@@ -23,6 +23,10 @@
         {
             "name": "Repelling Blast",
             "desc": "When I hit a creature with Eldritch Blast, I can push them 10 feet away from me."
+        },
+        {
+            "name": "Visions of Distant Realms",
+            "desc": "I can cast 'arcane eye' at will without expending a spell slot."
         }
     ]
 }
