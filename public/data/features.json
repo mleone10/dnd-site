@@ -44,6 +44,11 @@
             "name": "Dark Delerium",
             "source": "Archfey Patron",
             "desc": "Once per rest, a target creature I can see within 60' must make a Wisdom save against my spell save DC or be plunged into an illusory realm.  It is charmed or frightened for a minute, until concentration is broken, or it takes any damage.  The creature can see and hear only itself, me, and the illusion."
+        },
+        {
+            "name": "Metamagic Adept",
+            "source": "Feat",
+            "desc": "I have two sorcery points to spend per long rest.  I know two Metamagic options: Quickened Spell and Distant Spell."
         }
     ]
 }
