@@ -13,6 +13,10 @@
             "desc": "I can inscribe rituals in my Book of Shadows. Rituals can be from any class's spell list, can only be cast as rituals, and must be of a level equal to or less than half of my warlock level (rounded up)."
         },
         {
+            "name": "Eldritch Spear",
+            "desc": "My Eldritch Blast has a range of 300 feed."
+        },
+        {
             "name": "Grasp of Hadar",
             "desc": "Once per turn when I hit a creature with Eldritch Blast, I can move that creature 10 feet straight toward me."
         },
