@@ -1,0 +1,144 @@
+{
+  "spellSlots": 5,
+  "spells": {
+    "0": [
+      {
+        "name": "Eldritch Blast"
+      },
+      {
+        "name": "Friends",
+        "concentration": true
+      },
+      {
+        "name": "Mage Hand"
+      },
+      {
+        "name": "Prestidigitation"
+      },
+      {
+        "name": "Light",
+        "source": "Blessing of the Moon Weaver"
+      },
+      {
+        "name": "Guidance",
+        "concentration": true,
+        "source": "Pact of the Tome"
+      },
+      {
+        "name": "Message",
+        "source": "Pact of the Tome"
+      },
+      {
+        "name": "Minor Illusion",
+        "source": "Pact of the Tome"
+      }
+    ],
+    "1": [
+      {
+        "name": "Armor of Agathys"
+      },
+      {
+        "name": "Hellish Rebuke"
+      },
+      {
+        "name": "Hex",
+        "concentration": true
+      },
+      {
+        "name": "Sleep",
+        "source": "Blessing of the Moon Weaver; once per long rest"
+      },
+      {
+        "name": "Detect Magic",
+        "ritual": true
+      },
+      {
+        "name": "Find Familiar",
+        "ritual": true
+      },
+      {
+        "name": "Comprehend Languages",
+        "ritual": true
+      }
+    ],
+    "2": [
+      {
+        "name": "Flock of Familiars"
+      },
+      {
+        "name": "Hold Person",
+        "concentration": true
+      },
+      {
+        "name": "Misty Step"
+      },
+      {
+        "name": "Invisibility",
+        "concentration": true,
+        "source": "Blessing of the Moon Weaver; once per long rest"
+      }
+    ],
+    "3": [
+      {
+        "name": "Counterspell"
+      },
+      {
+        "name": "Dispel Magic"
+      },
+      {
+        "name": "Fly",
+        "concentration": true
+      }
+    ],
+    "4": [
+      {
+        "name": "Dimension Door"
+      },
+      {
+        "name": "Greater Invisibility",
+        "concentration": true
+      }
+    ],
+    "5": [
+      {
+        "name": "Far Step",
+        "concentration": true
+      },
+      {
+        "name": "Hold Monster",
+        "concentration": true
+      },
+      {
+        "name": "Seeming"
+      },
+      {
+        "name": "Synaptic Static"
+      }
+    ],
+    "6": [
+      {
+        "name": "Tasha's Otherworldly Guise",
+        "arcanum": true,
+        "concentration": true
+      }
+    ],
+    "7": [
+      {
+        "name": "Force Cage",
+        "arcanum": true
+      }
+    ],
+    "8": [
+      {
+        "name": "Dominate Monster",
+        "arcanum": true
+      }
+    ],
+    "9": [
+      {
+        "name": "Foresight",
+        "arcanum": true
+      }
+    ]
+  }
+}
