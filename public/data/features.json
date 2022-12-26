@@ -49,6 +49,11 @@
             "name": "Metamagic Adept",
             "source": "Feat",
             "desc": "I have two sorcery points to spend per long rest.  I know two Metamagic options: Quickened Spell and Distant Spell."
+        },
+        {
+            "name": "Eldritch Master",
+            "source": "Class",
+            "desc": "Once per long rest, I can spend 1 minute entreating my patron for aid.  If I do, I regain all expended Pact Magic spell slots."
         }
     ]
 }
